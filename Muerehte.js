@@ -282,6 +282,7 @@ const logout = () => {
   showUserDashboard();
 };
 
+/*
 // web3 mint function
 const freeMint = async () => {  
     // check if there is global userWalletAddress variable
@@ -303,26 +304,21 @@ const freeMint = async () => {
             //gas_price = web3.utils.toWei("30", "gwei"); // 30 Gwei gas //32.067398075       	
             //contract.methods.reserveMintMuerehte().send({ from: window.userWalletAddress, gas: gas_limit, gasPrice: gas_price });
 
-try {
-    // 發送交易
-    const transaction = await contract.methods.reserveMintMuerehte().send({
-        from: window.userWalletAddress,
-        gas: gas_limit,
-        gasPrice: gas_price
-    });
+            try {
+                const transaction = await contract.methods.reserveMintMuerehte().send({
+                    from: window.userWalletAddress,
+                    gas: gas_limit,
+                    gasPrice: gas_price
+                });
 
-    // 在這裡處理交易成功的情況
-    console.log('Transaction hash:', transaction.transactionHash);
-} catch (error) {
-    // 在這裡處理錯誤情況
-    console.error('Transaction failed:', error.message);
+                console.log('Transaction hash:', transaction.transactionHash);
+            } catch (error) {
+                console.error('Transaction failed:', error.message);
 
-    // 如果錯誤是由於 gas 不足，你可以提高 gas_limit 或 gas_price 並重試
-    if (error.message.includes('insufficient funds')) {
-        console.warn('Insufficient funds. Please check your account balance.');
-    }
-}
-
+                if (error.message.includes('insufficient funds')) {
+                    console.warn('Insufficient funds. Please check your account balance.');
+                }
+            }
         }
         else
         {
@@ -334,6 +330,7 @@ try {
         alert("Mint with whitelist is not available");
     }    
 };
+*/
 
 // web3 mint function
 const mint = async () => {  
@@ -373,7 +370,7 @@ document.querySelector(".login-btn").addEventListener("click", loginWithEth);
 document.querySelector(".logout-btn").addEventListener("click", logout);
 
 // when the user clicks the free-mint button run the pause function
-document.querySelector(".free-mint-btn").addEventListener("click", freeMint);
+//document.querySelector(".free-mint-btn").addEventListener("click", freeMint);
 
 // when the user clicks the mint button run the pause function
 document.querySelector(".mint-btn").addEventListener("click", mint);
