@@ -1,0 +1,55 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <script src="snowstorm-min.js"></script>
+    
+    <!-- Include Web3 script -->
+    <script src="web3.min.js"></script>
+
+    <script>
+    // Your JavaScript code using Web3
+    var provider = "https://mainnet.infura.io/v3/d8ef4f2e5b734a2c97c0d7d400d6c2df";
+    var APIKey = 'd8ef4f2e5b734a2c97c0d7d400d6c2df';
+    var web3Provider = new Web3.providers.HttpProvider(provider);
+    var web3 = new Web3(web3Provider);
+    </script>    
+
+    <!-- CSS STYLES -->
+    <link rel="stylesheet" href="HTE.css" />
+    <title>HTE Coin</title>
+</head>
+<body>
+    <!-- Welcome Section -->
+    <div class="welcome-section">
+        <h1>HTE Coin</h1>
+    </div>
+
+    <!-- DASHBOARD SECTION -->
+    <section class="dashboard-section">
+    	<h3 class="totalSupply-heading">
+            TotalHTE :
+            <span class="totalSupply"></span>
+        </h3>
+        <h3 class="liquidity-heading">
+            Liquidity :
+            <span class="liquidity"></span>
+        </h3>
+        <br>
+        <br>
+    </section>
+
+    <!-- Additional Link Section -->
+    <div class="additional-link-section">
+    	<br>
+        <p>Swap on <a href="https://app.uniswap.org/tokens/ethereum/0x5048313c25205645E151042D39F64b86829289A3" target="_blank">Uniswap V3</a>
+        Token on <a href="https://etherscan.io/token/0x5048313c25205645E151042D39F64b86829289A3" target="_blank">Etherscan.io</a><br><br></p>
+    </div>
+</body>
+<!-- SCRIPT -->
+<script src="./HTE.js"></script>
+</html>
