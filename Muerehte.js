@@ -9,7 +9,7 @@ window.onload = async (event) => {
         window.web3 = new Web3(window.ethereum);
     
         // contract address
-        NFT_address = "0x226Eb54B387F6877831b24E78bF04A829FfCDB6f";
+        NFT_address = "0x12dc17440614af3571446AD7a503B909C8A5534e";
 	    // abi
         NFT_abi = [
             {"inputs":[],"stateMutability":"nonpayable","type":"constructor"},
