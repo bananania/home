@@ -71,7 +71,7 @@ const get_totalSupply = async () => {
 
 // get liquidity
 const get_liquidity = async () => {
-	HTE_liquidityAddress = "0xD312f4aF95ca7C78552E04e6e93f76e41f2E3e6B";
+	HTE_liquidityAddress = "0x26d794Ce315d59147A9af042a39a9dD65BEE5855";
 	HTE_liquidity = await contract.methods.balanceOf(HTE_liquidityAddress).call();
 	HTE_liquidity -= HTE_liquidity % 1000000000000000000;
 	HTE_liquidity = HTE_liquidity / 1000000000000000000;
