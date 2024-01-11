@@ -49,6 +49,7 @@ window.onload = async (event) => {
 const showUserDashboard = async () => {
 	get_totalSupply();
     get_liquidity();
+    get_gasPrice();
     // Initialize Snowfall
     snowStorm();
 };
@@ -72,4 +73,12 @@ const get_liquidity = async () => {
     document.querySelector(".liquidity").innerHTML = HTE_liquidity;
 }
 
+// get gas price
+const get_gasPrice = async () => {
+	gas_price = await web3.eth.getGasPrice();
+	gas_price -= gas_price % 1000000000;
+	gas_price = gas_price / 1000000000; //Gwei
+    gas_price = Number(gas_price).toString();
+    document.querySelector(".gasPrice").innerHTML = gas_price;
+}
 
