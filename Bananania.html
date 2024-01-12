@@ -1,0 +1,61 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Web3.js LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Web3.js LIBRARY -->
+    <script language="javascript" type="text/javascript" src="web3.min.js"
+    ></script>
+
+    <!-- CSS STYLES -->
+    <link rel="stylesheet" href="Bananania.css" />
+    <title>Bananania NFT Mint</title>
+  </head>
+  <body>
+
+    <!-- LOGIN SECTION -->
+    <section class="login-section">
+      <button class="login-btn">Log in</button>
+      <span class="instruction">
+        Ensure to have a <a href="https://metamask.io/" target="_blank">MetaMask</a> wallet
+      </span>
+    </section>
+
+    <!-- DASHBOARD SECTION -->
+    <section class="dashboard-section">
+      <h2 class="wallet-status">Wallet Connected!</h2>
+      <h3 class="wallet-address-heading">
+        Wallet Address
+        <span class="wallet-address"></span>
+      </h3>
+      <h3 class="wallet-balance-heading">
+        ETH Balance
+        <span class="wallet-balance"></span>
+      </h3>
+      <h3 class="HTE-balance-heading">
+        Bananania NFT Balance
+        <span class="HTE-balance"></span>
+      </h3>
+      <br><br>
+      <button class="mint-btn">Mint it</button>
+      <span class="instruction">
+        Cost 0.02 ETH per Bananania NFT
+      </span>
+      <br>
+      <button class="logout-btn">Log out</button>      
+    </section>
+  </body>
+
+  <!-- SCRIPT -->
+  <script src="Bananania.js"></script>
+</html>
