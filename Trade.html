@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Bananania NFT</title>
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(to bottom right, #FFF176, #FFEB3B);
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto; /* Center the table */
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #FFF9C4;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Image</th>
+                <th>Owner</th>
+                <th>Floor</th>
+                <th>Trade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td><img src="0.gif" alt="Image 0"></td>
+                <td>Owner</td>
+                <td>0.002</td>
+                <td><button onclick="performTransaction(0)">Buy</button></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><img src="1.gif" alt="Image 1"></td>
+                <td>Owner</td>
+                <td>0.002</td>
+                <td><button onclick="performTransaction(1)">Buy</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><img src="2.gif" alt="Image 2"></td>
+                <td>Owner</td>
+                <td>0.002</td>
+                <td><button onclick="performTransaction(2)">Buy</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><img src="3.gif" alt="Image 3"></td>
+                <td>Owner</td>
+                <td>0.002</td>
+                <td><button onclick="performTransaction(3)">Buy</button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><img src="4.gif" alt="Image 4"></td>
+                <td>Owner</td>
+                <td>0.002</td>
+                <td><button onclick="performTransaction(4)">Buy</button></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><img src="5.gif" alt="Image 5"></td>
+                <td>Owner</td>
+                <td>0.002</td>
+                <td><button onclick="performTransaction(5)">Buy</button></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><img src="6.gif" alt="Image 6"></td>
+                <td>Owner</td>
+                <td>0.002</td>
+                <td><button onclick="performTransaction(6)">Buy</button></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><img src="7.gif" alt="Image 7"></td>
+                <td>Owner</td>
+                <td>0.002</td>
+                <td><button onclick="performTransaction(7)">Buy</button></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><img src="8.gif" alt="Image 8"></td>
+                <td>Owner</td>
+                <td>0.002</td>
+                <td><button onclick="performTransaction(8)">Buy</button></td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+
+    <script>
+        function performTransaction(rowNumber) {
+            // Add your transaction logic here
+            alert("Success! No." + rowNumber);
+        }
+    </script>
+</body>
+</html>
