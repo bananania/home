@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Include Web3 script -->
+    <script src="web3.min.js"></script>
+    
+    <script>
+    // Your JavaScript code using Web3
+    var provider = "https://mainnet.infura.io/v3/d8ef4f2e5b734a2c97c0d7d400d6c2df";
+    var APIKey = 'd8ef4f2e5b734a2c97c0d7d400d6c2df';
+    var web3Provider = new Web3.providers.HttpProvider(provider);
+    var web3 = new Web3(web3Provider);
+    </script> 
+    
     <title>Trade Bananania NFT</title>
     <style>
         body {
@@ -35,6 +47,7 @@
         button {
             background-color: #4CAF50;
             color: white;
+            margin: 5px;
             padding: 8px 15px;
             border: none;
             border-radius: 5px;
@@ -50,7 +63,7 @@
     <table>
         <thead>
             <tr>
-                <th>No.</th>
+                <th>ID</th>
                 <th>Image</th>
                 <th>Owner</th>
                 <th>Floor</th>
@@ -61,74 +74,103 @@
             <tr>
                 <td>0</td>
                 <td><img src="./icon/0.gif" alt="Image 0"></td>
-                <td>Owner</td>
-                <td>0.002</td>
-                <td><button onclick="performTransaction(0)">Buy</button></td>
+                <td id="Owner0">Owner</td>
+                <td>0.02</td>
+                <td><button onclick="clickBuy(0)">Buy</button><button onclick="List(0)">clickList</button></td>
             </tr>
             <tr>
                 <td>1</td>
                 <td><img src="./icon/1.gif" alt="Image 1"></td>
-                <td>Owner</td>
-                <td>0.002</td>
-                <td><button onclick="performTransaction(1)">Buy</button></td>
+                <td id="Owner1">Owner</td>
+                <td>0.02</td>
+                <td><button onclick="clickBuy(1)">Buy</button><button onclick="List(1)">clickList</button></td>
             </tr>
             <tr>
                 <td>2</td>
                 <td><img src="./icon/2.gif" alt="Image 2"></td>
-                <td>Owner</td>
-                <td>0.002</td>
-                <td><button onclick="performTransaction(2)">Buy</button></td>
+                <td id="Owner2">Owner</td>
+                <td>0.02</td>
+                <td><button onclick="clickBuy(2)">Buy</button><button onclick="List(2)">clickList</button></td>
             </tr>
             <tr>
                 <td>3</td>
                 <td><img src="./icon/3.gif" alt="Image 3"></td>
-                <td>Owner</td>
-                <td>0.002</td>
-                <td><button onclick="performTransaction(3)">Buy</button></td>
+                <td id="Owner3">Owner</td>
+                <td>0.02</td>
+                <td><button onclick="clickBuy(3)">Buy</button><button onclick="List(3)">clickList</button></td>
             </tr>
             <tr>
                 <td>4</td>
                 <td><img src="./icon/4.gif" alt="Image 4"></td>
-                <td>Owner</td>
-                <td>0.002</td>
-                <td><button onclick="performTransaction(4)">Buy</button></td>
+                <td id="Owner4">Owner</td>
+                <td>0.02</td>
+                <td><button onclick="clickBuy(4)">Buy</button><button onclick="List(4)">clickList</button></td>
             </tr>
             <tr>
                 <td>5</td>
                 <td><img src="./icon/5.gif" alt="Image 5"></td>
-                <td>Owner</td>
-                <td>0.002</td>
-                <td><button onclick="performTransaction(5)">Buy</button></td>
+                <td id="Owner5">Owner</td>
+                <td>0.02</td>
+                <td><button onclick="clickBuy(5)">Buy</button><button onclick="clickList(5)">List</button></td>
             </tr>
             <tr>
                 <td>6</td>
                 <td><img src="./icon/6.gif" alt="Image 6"></td>
-                <td>Owner</td>
-                <td>0.002</td>
-                <td><button onclick="performTransaction(6)">Buy</button></td>
+                <td id="Owner6">Owner</td>
+                <td>0.02</td>
+                <td><button onclick="clickBuy(6)">Buy</button><button onclick="clickList(6)">List</button></td>
             </tr>
             <tr>
                 <td>7</td>
                 <td><img src="./icon/7.gif" alt="Image 7"></td>
-                <td>Owner</td>
-                <td>0.002</td>
-                <td><button onclick="performTransaction(7)">Buy</button></td>
+                <td id="Owner7">Owner</td>
+                <td>0.02</td>
+                <td><button onclick="clickBuy(7)">Buy</button><button onclick="clickList(7)">List</button></td>
             </tr>
             <tr>
                 <td>8</td>
                 <td><img src="./icon/8.gif" alt="Image 8"></td>
-                <td>Owner</td>
-                <td>0.002</td>
-                <td><button onclick="performTransaction(8)">Buy</button></td>
+                <td id="Owner8">Owner</td>
+                <td>0.02</td>
+                <td><button onclick="clickBuy(8)">Buy</button><button onclick="clickList(8)">List</button></td>
             </tr>
             <!-- Add more rows as needed -->
         </tbody>
     </table>
 
     <script>
-        function performTransaction(rowNumber) {
+    	var Owner0 = document.getElementById("Owner0");
+    	var Owner1 = document.getElementById("Owner1");
+    	var Owner2 = document.getElementById("Owner2");
+    	var Owner3 = document.getElementById("Owner3");
+    	var Owner4 = document.getElementById("Owner4");
+    	var Owner5 = document.getElementById("Owner5");
+    	var Owner6 = document.getElementById("Owner6");
+    	var Owner7 = document.getElementById("Owner7");
+    	var Owner8 = document.getElementById("Owner8");
+    	
+    	Owner0.innerHTML = "-";
+    	Owner1.innerHTML = "-";
+    	Owner2.innerHTML = "-";
+    	Owner3.innerHTML = "-";
+    	Owner4.innerHTML = "-";
+    	Owner5.innerHTML = "-";
+    	Owner6.innerHTML = "-";
+    	Owner7.innerHTML = "-";
+    	Owner8.innerHTML = "-";
+    	
+    	//var originalString = "0xabE23Dea8973A";
+    	//var shortenedString = originalString.substr(4, 5).toUpperCase();
+    	//console.log(shortenedString);    	
+    	
+        function clickBuy(rowNumber) {
             // Add your transaction logic here
-            alert("Success! No." + rowNumber);
+            alert("Buy No." + rowNumber);
+        }
+        
+        function clickList(rowNumber) {
+            // Add your transaction logic here
+            alert("List No." + rowNumber);
         }
     </script>
 </body>
