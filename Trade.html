@@ -234,10 +234,10 @@ var Floor8 = document.getElementById("Floor8");
 const showUserDashboard = async () => {    	
 	// get first
 	getOwnerAll();	
-	getFloorAll();
+	//getFloorAll();
 	// show
 	//showOwnerAll();
-	//showFloorAll();
+	showFloorAll();
 };
 
 //================================
@@ -262,10 +262,10 @@ const getOwnerAll = async () => {
 	}
 }
 
-const getFloorAll = async () => {
+const getFloorAll = async () => { //TBD
 	for (i = 0; i < 9; i++) {
-		//var floorString = ""; //TBD
-		//floorString = await contract.methods.ownerOf(i).call(); //TBD
+		var floorString = "";
+		floorString = await contract.methods.ownerOf(i).call();
 		switch (i) {
 			case 0: Floor0.innerHTML = "25675000 BANANA"; break;
 			case 1: Floor1.innerHTML = "25675000 BANANA"; break;
@@ -297,8 +297,8 @@ function showOwnerAll() {
 }
 
 function showFloorAll() {
-	Floor0.innerHTML = "-";
-	Floor1.innerHTML = "-";
+	Floor0.innerHTML = "25675000 BANANA";
+	Floor1.innerHTML = "25675000 BANANA";
 	Floor2.innerHTML = "-";
 	Floor3.innerHTML = "-";
 	Floor4.innerHTML = "-";
