@@ -6,7 +6,8 @@ window.userWalletAddress = null;
 //================================
 window.onload = async (event) => {
 	// contract address
-    HTE_address = "0xC40417C65306dC5fF11A62578EF56f3006124Ab3";
+    //HTE_address = "0xC40417C65306dC5fF11A62578EF56f3006124Ab3";
+    HTE_address = "0x7D88Df8c542A6c5D7665130d10B06AC833fd2B11"; // sepolia
 	// abi
     HTE_abi = [
         {"inputs":[],"stateMutability":"nonpayable","type":"constructor"},
@@ -71,7 +72,8 @@ const get_totalSupply = async () => {
 
 // get liquidity
 const get_liquidity = async () => {
-	HTE_liquidityAddress = "0x26d794Ce315d59147A9af042a39a9dD65BEE5855";
+	//HTE_liquidityAddress = "0x26d794Ce315d59147A9af042a39a9dD65BEE5855";
+	HTE_liquidityAddress = "0x2328C74A4FbA959DBC711E01176aD2e46417cb86"; // sepolia
 	HTE_liquidity = await contract.methods.balanceOf(HTE_liquidityAddress).call();
 	HTE_liquidity -= HTE_liquidity % 1000000000000000000;
 	HTE_liquidity = HTE_liquidity / 1000000000000000000;
