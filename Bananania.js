@@ -9,7 +9,8 @@ window.onload = async (event) => {
         window.web3 = new Web3(window.ethereum);
     
         // contract address
-        NFT_address = "0x12dc17440614af3571446AD7a503B909C8A5534e";
+        //NFT_address = "0x12dc17440614af3571446AD7a503B909C8A5534e";
+        NFT_address = "0x856015dA4A624EF1Db6435398d72CC56d4EEDf81"; // sepolia
 	    // abi
         NFT_abi = [
             {"inputs":[],"stateMutability":"nonpayable","type":"constructor"},
