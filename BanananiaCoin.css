@@ -1,0 +1,77 @@
+/* index.css */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom right, #87CEFA, #ADD8E6);
+    height: 100vh;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to bottom right, #87CEFA, #ADD8E6);
+    border-bottom: 2px solid #4682B4;
+    width: 100%;
+}
+
+h1 {
+    color: #4682B4;
+    margin: 0;
+}
+
+/* DASHBOARD SECTION */
+.dashboard-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(to bottom right, #ffffff, #87CEFA);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 100%;
+}
+
+h3 {
+    color: #4682B4;
+    letter-spacing: 1.5px;
+    margin-top: 1rem;
+    text-align: left;
+    width: 100%;
+}
+
+span {
+    background: #4682B4;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 19px;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+p {
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/* Additional Link Section */
+.additional-link-section {
+    margin-top: 10px;
+}
+
+a {
+    color: #4682B4;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
