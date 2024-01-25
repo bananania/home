@@ -116,9 +116,24 @@
   <div id="phase4" class="phase">
     <div class="links-container">
       <h2>Bananania White Paper</h2><br>
-      <a href="./whitepaper.html" class="link">White Paper</a><br><br>
+      <a href="./whitepaper.html" class="link">White Paper</a><br>
     </div>
+    <div id="counter">Loading...</div>
   </div>
+  
+  <script>
+    // JavaScript code to handle the counter
+    let visitCount = localStorage.getItem('visitCount') || 0;
+    function updateCounter() {
+        visitCount++;
+        document.getElementById('counter').textContent = visitCount;
+        localStorage.setItem('visitCount', visitCount);
+    }
+    // Display the counter on page load
+    window.onload = function () {
+        updateCounter();
+    };
+  </script>
 
 </body>
 
