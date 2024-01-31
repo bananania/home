@@ -1,0 +1,91 @@
+https://mega.nz/file/VkpRybLQ#T9T9hdYzUIpZg0R6xPx1PSWQI4_03kiSLtKasQisb70
+https://mega.nz/folder/984yQRpS#p5zNAi8mC8_NxwKJYCw5Xg
+https://mega.nz/file/ttAXzSwA#JRsW0RKZz28WIEZd-y62LJJ1eiPKTapCH3kIX8oaM5o
+
+1. download and install Java 1.7 , jdk 1.7.0_79 
+    - 安裝 "jdk-7u79-windows-x64.exe" 會自動再裝jre
+    https://www.oracle.com/tw/java/technologies/javase/javase7-archive-downloads.html
+    Oracle account
+    https://profile.oracle.com/myprofile/account/create-account.jspx
+    banananiagm mail / same as office
+2. download and install Eclipse 
+    - 安裝 "eclipse-inst-jre-win64.exe"
+    - 選第一項 Eclipse IDE for Java Developers  
+    - 路徑設 D:\eclipse
+    - create workspace D:\eclipse\workspace
+    - follow install info
+    - copy l1j folder and paste to src folder in left side
+
+
+
+
+======================================================================
+240115 create
+l1j-tw-99nets
+
+lineage45.com
+bananania F9x
+
+
+https://lineage45.com/forum.php?mod=viewthread&tid=23016&highlight=java
+【Java教學】基礎核心修改
+1. 工具準備
+jdk1.6.0_24 (核心的基礎架構:java 一種程式語言 Sum網站下載得到)
+eclipse (編譯JAVA的工具 算是程式語言的書寫器)
+
+2.
+安裝
+jdk1.6.0_24
+因為安裝程式無法替我們解決輸入環境變量的問題
+因此這個部份我們需要自己
+安裝完jdk1.6.0_24 之後
+請在桌面上『我的電腦』按右鍵，再點擊『內容』。
+切換到『進階』，再點擊『環境變數』。
+
+在變數名稱輸入『JAVA_HOME』，在變數值輸入『C:\Program Files\Java\jdk1.6.0_06』，然後點擊『確定』。
+上面的『C:\Program Files\Java\jdk1.6.0_06』，為你的安裝路徑
+在變數名稱輸入『classpath』，在變數值輸入『.』，然後點擊『確定』。
+輸入[.]是代表為目前的資料夾
+在系統變數裡找到『Path』，然後點擊『編輯』。在變數值的最前面加入『%JAVA_HOME%\bin;』 然後點擊『確定』。
+
+再點擊『確定』。
+
+這樣就作完JDK的安裝及設定
+
+接下來是eclipse 直接打開
+建立一個工作區為你的專案目錄
+在模擬器 把 src資料夾 lib資料夾 build.xml
+全部複製到你的工作區
+
+開啟eclipse.exe
+選檔案=>新建=>專案
+選擇 來自現有 Ant 建置檔的 Java專案 後 按 下一步
+
+專案名稱輸入完畢後
+Ant建置檔 按瀏覽 選擇 1901資料夾 裡的 build.xml
+
+關閉eclipse.exe
+把 工作區資料夾 裡的 src 和 lib 複製到 剛創建的專案
+
+開啟eclipse.exe
+選L1J 案右鍵=>內容
+
+在[資訊] 修改 文字檔編碼 改成UTF-8
+
+在Java編譯器 把 啟用專案專用設定勾選 再把使用預設標準設定 改成 6.0
+
+會看到一堆錯誤 不過不用害怕 我們還有下一個步驟
+
+選擇搜尋=>搜尋
+
+選 檔案搜尋 在 包含文字 下面打上 @Override 再按搜尋
+
+接下來會出現 有出現@Override的檔案
+
+選取所有檔案
+按右鍵=>取代 會出現 取代 @Override
+把 換成打上 換成 //@Override
+
+再來按全部取代
+
+這樣子就完成基本的核心導入編譯器

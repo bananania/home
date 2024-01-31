@@ -1,0 +1,21 @@
+１：首先安裝JAVA 6吧!
+２：安裝Navicat8_mysq!
+３：安裝 mysql-essential-6.0.0，到下圖這個地方，帳號密碼請輸入root
+４：開始架設吧，打開安裝好的　Navicat for MySQL　
+　　　　1.打開Navicat
+　　　　　檔案→新增連線→密碼填寫root→連線測試→確定 
+         IP: localhost
+         Port: 3306
+       2.左邊出現新連線localhost 
+　　　　　右鍵點localhost→開啓連線→新增資料庫→名稱打上l1jdb
+       3.左邊出現新資料庫l1jdb 
+　　　　　右鍵點l1jdb→執行批次任務檔案→找到剛剛解壓縮模擬器DB資料夾裏的l1jdb_MyISAM_big5.sql文件加打開選擇→l1jdb載入 
+       開始之後，等他跑完後按關閉，接著下一步。
+       ５在模擬器資料夾打開＂config＂用記事本打開＂rates.properties＂，可以調整以下東西。
+              接著一樣打開資料夾＂config＂用記事本打開＂server.properties＂
+              ６執行模擬器資料夾"ResetServerold.exe"，點選"ResetServerold.exe"
+       ７這樣伺服器就啟動了，再次提醒，用這個版本需要下載安裝補丁喔，若沒有安裝補丁，會造成斷線卡點。補丁下載
+              過兩天會再打一篇有關資料庫修改的文章，裡面包含了改武器，改金幣數量，改人物素質，改做標，備分資料。
+              ８架設完畢之後，如果想要對外開放，建議是去開一個奇摩家族，然後比較方便管哩。
+　           或是，我可以幫你po在我的部落格，有需要的在留言或密我吧！！
+       啟動伺服器之後只要出現ok就是成功開啟了！！
