@@ -1,0 +1,9 @@
+0.two sword 17 3 (0-16) 000L 001H 002H
+1.one sword 34 1 (17-50) 017L 018H 019H
+2.bow 28 1 (51-78) 051L 052H 053H
+3.magic wand 24 1 (79-102) 079L 080H 081H
+4.double sword 39 1 (103-141) 103L 104H 105H
+5.axe 25 1 (142-166) 142L 143H 144H
+6.dagger 13 1 (167-179) 167L 168H
+------ 180: 7 legend 13 hero 160 rare
+

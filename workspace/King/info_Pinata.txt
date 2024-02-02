@@ -1,0 +1,35 @@
+T2     : 0x307eE9d18945D3276a9150e52C69C2744787e45B raybinking.eth
+gmail  : raybinking@gmail.com Dux
+gitHub : raybinking@gmail.com same as office
+clone  : use gitHub Desktop to clone Repository
+X      : @RaybinKing raybinking@gmail.com same as office
+Pinata : https://app.pinata.cloud/ office mail Dux+22
+Microsoft copilot : raybinking@gmail.com same as office
+
+Xmas :
+T2   : 0x307eE9d18945D3276a9150e52C69C2744787e45B
+1000L: 0x7784c45Ec594575256095C8Bb6d3c4E8C831a107
+Pool : 0x7f7b61f9Da2E76938c145bE78AB4509BfeE02C8E
+
+upload
+//path/xxx.png
+//path/json/xxx.json
+
+sword.png
+//QmXprp6YkYrXwbef2Fx1zpSkVs6L5pqu4oodBMM7wWAvYd
+//https://ipfs.io/ipfs/QmXprp6YkYrXwbef2Fx1zpSkVs6L5pqu4oodBMM7wWAvYd/sword.png
+
+icon.png
+QmdcfEAdaRNWz9NqaUzoyZtXKgnis6wKXtUXUHDDZdT1PA
+https://ipfs.io/ipfs/QmdcfEAdaRNWz9NqaUzoyZtXKgnis6wKXtUXUHDDZdT1PA/icon.png
+
+html
+https://raybinking.github.io/html/index.html
+https://github.com/raybinking/html/tree/main/icon
+
+uniswap
+https://app.uniswap.org/tokens/ethereum/0x7784c45ec594575256095c8bb6d3c4e8c831a107
+
+
+
+

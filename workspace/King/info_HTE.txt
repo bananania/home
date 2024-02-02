@@ -1,0 +1,92 @@
+T2     : 0x307eE9d18945D3276a9150e52C69C2744787e45B raybinking.eth
+gmail  : raybinking@gmail.com Dux
+gitHub : raybinking@gmail.com same as office
+clone  : use gitHub Desktop to clone Repository
+X      : @RaybinKing raybinking@gmail.com same as office
+Pinata : https://app.pinata.cloud/ office mail Dux+22
+Microsoft copilot : raybinking@gmail.com same as office
+
+==================================================================================
+Sepolia same as LINK Token
+T8   : 0x681Fb766860effE8f220a846B207dD5F73Fd8319
+HTE  : 0x8245B79B69D9aD20dBD44Ef44340c639416a10fe
+Pool : 0xcd15830963e5590a6Cc76342aC1f47726f2a1E81
+WETH : 0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14
+CCFC : 0x9E72Ec0D0574AC5bb4c2e6084B4Ab2321683F81E
+https://raybinking.github.io/HTE/
+MIL  : 0xab7AA65B82bdfF3f420425e7692583493ff68A8c
+
+==================================================================================
+
+Ezgif: https://ezgif.com/resize
+
+upload
+//weapon/metadata/0
+//weapon/image/0
+
+Pinata : https://app.pinata.cloud/ litemaxmail Dux+22
+
+Milady
+Muerehte: 0x6D2EAc5CD1Baba66d367362041417074958203fE
+"image" : "https://ipfs.io/ipfs/QmSfL3haoGT6q6dnB1X1fhv1mFgP41kzPERrNx7GgBmdXU/0.png",
+"animation_url": "https://ipfs.io/ipfs/QmSfL3haoGT6q6dnB1X1fhv1mFgP41kzPERrNx7GgBmdXU/0.gif"
+MiladyJS/json
+BaseURI : https://ipfs.io/ipfs/QmfSZ9M4QDGdGQCgjDF3N3mapk6M5kdZaMshNUcDq7dPZZ/json/
+
+https://testnets.opensea.io/zh-TW/collection/muerehte
+
+==================================================================================
+Reference
+Builder : 0x00859b3baaC525143BB8A3ee3e19DDf9Daf2408c
+Contract: 0x5Af0D9827E0c53E4799BB226655A1de152A425a5
+Milady  : https://www.miladymaker.net/milady/0.png
+          https://www.miladymaker.net/milady/json/0
+BaseUri : https://www.miladymaker.net/milady/json/
+
+Owner   : 0xF6Af5488D1Ad7AB03380244FD45A13C88FAcFE45
+Contract: 0xa391E07B8d6Df0c7865D1CA580d23452d777AfD2
+
+==================================================================================
+Old     
+ORG   : 0xcD354E35B638c9D3193e4334d9becb0C53eCe2cF
+CCFC  : 0x9906964d253c6094E07f16e35E736159D7f3fc7A
+URI   : https://s3.amazonaws.com/metadata.coolcatsnft.com/ccfc-16689204/metadata/
+
+Owner : 0xF6Af5488D1Ad7AB03380244FD45A13C88FAcFE45
+ORG   : 0x3479772e914f9474d2162d1e3c5b1ba2ec63eccb
+CCFC  : 0x9906964d253c6094E07f16e35E736159D7f3fc7A
+URI   : https://s3.amazonaws.com/metadata.coolcatsnft.com/ccfc-16689204/metadata/
+
+==================================================================================
+Xmas = 1000L
+T2   : 0x307eE9d18945D3276a9150e52C69C2744787e45B
+1000L: 0x7784c45Ec594575256095C8Bb6d3c4E8C831a107
+Pool : 0x7f7b61f9Da2E76938c145bE78AB4509BfeE02C8E
+
+upload
+//path/xxx.png
+//path/json/xxx.json
+
+sword.png
+//QmXprp6YkYrXwbef2Fx1zpSkVs6L5pqu4oodBMM7wWAvYd
+//https://ipfs.io/ipfs/QmXprp6YkYrXwbef2Fx1zpSkVs6L5pqu4oodBMM7wWAvYd/sword.png
+
+icon.png
+QmdcfEAdaRNWz9NqaUzoyZtXKgnis6wKXtUXUHDDZdT1PA
+https://ipfs.io/ipfs/QmdcfEAdaRNWz9NqaUzoyZtXKgnis6wKXtUXUHDDZdT1PA/icon.png
+
+verify hash
+0x0e4554bfda0cf4ffb7056bd3750845050fee587869141010fef70b1caf8b203f49c2e69206eaf1451f6a97db290c0ed7bbc03def24705c3e57e0b3475e3ce5db1b
+
+html
+https://raybinking.github.io/html/index.html
+https://github.com/raybinking/html/tree/main/icon
+
+uniswap
+https://app.uniswap.org/tokens/ethereum/0x7784c45ec594575256095c8bb6d3c4e8c831a107
+
+==================================================================================
+
+
+
+

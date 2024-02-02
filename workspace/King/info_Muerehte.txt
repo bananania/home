@@ -1,0 +1,53 @@
+T8  : 0x681Fb766860effE8f220a846B207dD5F73Fd8319
+NFT : 0x226Eb54B387F6877831b24E78bF04A829FfCDB6f
+HTE : 0x5048313c25205645E151042D39F64b86829289A3
+Pool: 0xD312f4aF95ca7C78552E04e6e93f76e41f2E3e6B
+0.0000000001 / 1 / 1283750000 = 2B:1ETH
+====================================== done
+1.NFT
+  - 0.02 x 180
+  - 9 legend / 21 hero / 150 rare
+  - Pinata : https://app.pinata.cloud/ litemaxmail Dux+22
+  - pinata Muerehte / MuerehteJS  
+  - https://ipfs.io/ipfs/QmPz3GJjBMcfgX7zkyF8uEmjuPRvkKmARejTMBBWBsx3ko/0.png
+  - https://ipfs.io/ipfs/QmPz3GJjBMcfgX7zkyF8uEmjuPRvkKmARejTMBBWBsx3ko/0.gif
+  - https://ipfs.io/ipfs/QmVpzV5BCssMtTc4J9hyMRshYbM86w6d3bNXYDXMthWHrc/json/  
+  - Legend HTE / HTEJS
+  - https://ipfs.io/ipfs/QmY8EHTR1hx7ZcwQbkWFcKFFCdmaeYXw6AFkZm1Mzbd3v7/0.png
+  - https://ipfs.io/ipfs/QmY8EHTR1hx7ZcwQbkWFcKFFCdmaeYXw6AFkZm1Mzbd3v7/0.gif
+  - https://ipfs.io/ipfs/Qmefm5g9pNtTbnfBR1rvesg6LxdUB6rFVWWihj4oSry9YG/json/
+====================================== done
+2.NFT_html
+  - white list x 20 reservemint
+  - mint x 160 x0.02  
+  - https://raybinking.github.io/HTE
+  - https://opensea.io/collection/muerehte-hte
+
+Airdrop NFT.
+
+Free mint Muerehte NFT by wallet address.
+https://raybinking.github.io/HTE
+
+Then you can check it on
+https://opensea.io/collection/muerehte-hte
+
+** There are 17 whitelist spots left.
+
+====================================== done
+3.ERC20
+  - HTE 10B (2B:1ETH market, 1B airdrop)
+  - 9,010,000,000 + 5,500,000 x 180 = 10B
+  - 0.0000000001 / 1 / 1283750000 = 2B:1ETH
+====================================== done
+4.Liquidity
+  - 2B : 1E
+======================================
+5.V350
+
+======================================
+6.V350_web3
+
+======================================
+7.Buy_armor_posion
+
+

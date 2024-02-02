@@ -1,0 +1,15 @@
+sepolia============================================
+Owner  : 0x681Fb766860effE8f220a846B207dD5F73Fd8319
+ERC721 : 0x856015dA4A624EF1Db6435398d72CC56d4EEDf81
+ERC20  : 0x7D88Df8c542A6c5D7665130d10B06AC833fd2B11
+xxNFTMarketplace : 0xA43aE8B47B1AC8dB2281F415c55D2926f3369112
+
+Read
+isNftForSale(nftId) = bool
+nftPrices(nftId) = uint256
+
+Write
+listNftForSale(nftID, price)
+unlistNft(nftId)
+purchaseNft(nftId)
+

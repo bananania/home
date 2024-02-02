@@ -1,0 +1,9 @@
+Old     
+ORG   : 0xcD354E35B638c9D3193e4334d9becb0C53eCe2cF
+CCFC  : 0x9906964d253c6094E07f16e35E736159D7f3fc7A
+URI   : https://s3.amazonaws.com/metadata.coolcatsnft.com/ccfc-16689204/metadata/
+
+Owner : 0xF6Af5488D1Ad7AB03380244FD45A13C88FAcFE45
+ORG   : 0x3479772e914f9474d2162d1e3c5b1ba2ec63eccb
+CCFC  : 0x9906964d253c6094E07f16e35E736159D7f3fc7A
+URI   : https://s3.amazonaws.com/metadata.coolcatsnft.com/ccfc-16689204/metadata/
