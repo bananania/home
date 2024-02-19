@@ -1,6 +1,22 @@
+Eclipse
+https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2023-12/R/eclipse-java-2023-12-R-win32-x86_64.zip
+
+Mysql workbench
+https://www.mysql.com/products/workbench/
+
+Java
+https://www.java.com/zh-TW/download/
+
+l1j-tw-99nets
+
+
+
+
 https://mega.nz/file/VkpRybLQ#T9T9hdYzUIpZg0R6xPx1PSWQI4_03kiSLtKasQisb70
 https://mega.nz/folder/984yQRpS#p5zNAi8mC8_NxwKJYCw5Xg
 https://mega.nz/file/ttAXzSwA#JRsW0RKZz28WIEZd-y62LJJ1eiPKTapCH3kIX8oaM5o
+
+navicat8 + jre-8u111-windows-x64 + mysql-5.5.22-winx64
 
 1. download and install Java 1.7 , jdk 1.7.0_79 
     - 安裝 "jdk-7u79-windows-x64.exe" 會自動再裝jre
