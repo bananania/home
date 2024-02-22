@@ -9,6 +9,9 @@ https://www.java.com/zh-TW/download/
 
 l1j-tw-99nets
 
+eclipse-jee-mars-2-win32-x86_64
+jdk-7u79-windows-x64
+
 
 
 
