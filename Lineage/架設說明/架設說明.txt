@@ -1,0 +1,52 @@
+架設說明:
+
+(1) 開啟 Server
+    (1.1) 下載安裝 JAVA jdk1.7.0_79 (檔名: jdk-7u79-windows-x64.exe)
+          (下載路徑: "https://www.oracle.com/tw/java/technologies/javase/javase7-archive-downloads.html")
+    (1.2) 下載Server端源碼&編譯器, 編譯器在Server端源碼內
+          (下載路徑: "https://github.com/NewSvn/l1j-tw-99nets/L1J-TW_3.50c")
+          Server端源碼可放在 D:\L1J-TW_3.50c
+    (1.3) 解壓縮地圖 
+          視Lineage使用的版本, 如Lineage V3.6C, 選擇360_maps.zip, 如Lineage V3.52C, 選擇352_maps.zip
+          解壓縮D:\L1J-TW_3.50c\maps\360_maps.zip
+          (確定地圖是在maps資料夾,必須是D:\L1J-TW_3.50c\maps\0.map, 而不是D:\L1J-TW_3.50c\maps\maps\0.map)
+    (1.4) 設定環境變數
+          系統>>進階系統設定>>環境變數>>使用者變數>>
+          新增>>變數名稱 ANT_HOME 變數值 D:\L1J-TW_3.50c\build\ant
+          新增>>變數名稱 JAVA_HOME 變數值 C:\Program Files\Java\jdk1.7.0_79
+          編輯Path>>新增>> %ANT_HOME%\bin
+          編輯Path>>新增>> %JAVA_HOME%\bin
+    (1.5) 切換到Server端源碼的資料夾路徑
+          Windows>>執行>>輸入cmd>>開啟DOS介面>>輸入D:>>輸入cd L1J-TW_3.50c
+    (1.6) 編譯 L1J-TW_3.50c
+          輸入ant>>此時會開始編譯L1J-TW_3.50c, 編譯完成後, 會在D:\L1J-TW_3.50c找到開啟Server所需要的l1jserver.jar
+          編譯完成後, 關閉DOS視窗, 回到Windows
+    (1.7) 檢查Server設定
+          在D:\L1J-TW_3.50c\config資料夾, 檢查server.properties, rates.properties設定
+          (如果有更改設定, 需回到步驟1.5, 重新編譯出新的l1jserver.jar)
+    (1.8) 開啟 Server
+          在D:\L1J-TW_3.50c資料夾, 滑鼠雙擊ServerStart.bat, 正常跑完表示, Server已開啟, 等待使用者進入
+
+(2) 開啟資料庫
+
+
+
+(3) 下載Lineage V3.6C
+    (下載路徑: "https://drive.google.com/file/d/1ENAEupyWzzUVT53cDl4R4rfoz_RrvbUP/view")
+    下載後, 解壓縮到C:\Program Files
+
+(3) 更新Login檔
+
+
+(4) 執行Lineage V3.6C
+    滑鼠雙擊C:\Program Files\Lineage V3.6C\Login.exe
+
+(5) 新增WEB3應用
+    (5.1) 
+    (5.2) 
+    (5.3) 
+
+          
+          
+          
+          
