@@ -1,0 +1,86 @@
+需準備的相關軟體
+1. Eclipse IDE for Java[選可以架Server的]
+2. JDK
+3. Lineage 3.52C client端遊戲程式
+4. Lineage Server Source Code
+5. MySQL 資料庫
+6. Navicat 資料庫管理工具
+7. TortoiseSVN
+
+Step1
+安裝JDK與Eclipse並且設定好JDK的Path(可參考此篇Path設定)
+
+Step2
+安裝TortoiseSVN
+
+Step3
+新增資料夾，並對其資料夾按右鍵選擇TortoiseSVN→Export
+並至L1j-tw開發團隊複製URL貼至Export的URL
+便會開始下載ServerSourceCode
+
+Step4
+打開Eclipse並新建一個Java Project，成功建起後把剛下載的SourceCode覆蓋至此Java Project
+Java Project會存放至Eclipse資料夾底下的workspace資料夾裡
+而workspace可從Eclipse IDE的File→switch workspace→other查看
+
+Step5
+覆蓋後至Eclipse IDE的PackageExplorer找到剛創的Java Project對其右鍵選擇refresh
+若有成功此專案底下會多出很多資料夾及檔案，接著對此專案作編碼設定
+對此Java Project右鍵選擇Properties，Resource裡的Text file encodine選擇UTF-8
+
+Step6
+在此Java Project裡找到build.xml對其右鍵Run As→Ant Build
+接著找到config資料夾，打開server.properties檔案
+並在URL=後面打上此行【jdbc:mysql://localhost/l1jdb?useUnicode=true&characterEncoding=utf8】
+Login與Password則輸入MySQL帳號密碼
+設定完成如下：
+URL=jdbc:mysql://localhost/l1jdb?useUnicode=true&characterEncoding=utf8
+Login=你的MySQL帳號
+Password=你的MySQL密碼
+
+Step7
+至workspace，進Java Project資料夾，可以看到maps資料夾，對352_maps.zip解壓縮
+
+Step8
+安裝MySQL、Navicat，記得MySQL自行設定的帳號密碼以及port number
+
+Step9
+先至SVN資料夾底下，進入db資料夾，點擊Pack_DB.bat，會產生l1jdb_Taiwan.sql
+接著打開Navicat，新增MySQL連線，連線名稱可自訂，主機名稱輸入localhost
+埠輸入MySQL顯示的port number，名稱及密碼也輸入MySQL設定的帳號密碼
+可以按連線測試，正常會顯示連線成功
+建立好後對其連線點擊右鍵新增資料庫名稱請給l1jdb
+並對l1jdb點擊右鍵選擇開啟資料庫以及執行SQL檔案
+把l1jdb_Taiwan.sql的位置開啟，按下開始
+
+Step10
+安裝Lineage 3.52C client端遊戲程式
+下載登入器Login_v342
+進入Login_v342\編碼器
+打開Encode.exe
+標籤列選擇[工具]，天堂版本選擇351_S3DS2X，接著點擊變檔編碼
+標籤列選擇[編碼]，天堂版本選擇351_S3DS2X
+允許多開、變身檔選擇S3DS2X.pak、內建喝水輔助程式打勾
+接著按下按鈕編碼
+
+Step11
+進入Login_v342\編碼器
+複製裡面的Login.cfg、Login.ini
+以及進入Login_v342\登入器
+複製裡面的Login.exe、eat.dll、LinHelperZ.txt、S3DS2X.bin、Microsoft.VC90.CRT、skin
+貼至client端的遊戲程式內
+
+Step12
+把client端遊戲程式裡面的lin.lin移除
+並至l1j-tw論壇申請會員並下載Lin.bin
+把裡面的檔案丟置client端遊戲程式內
+
+Step13
+進入Login_v342\編碼器
+執行spr_action，點擊運行後選擇S3DS2X後，便會產生spr_action.sql
+再利用Navicat把spr_action.sql執行SQL檔案，把遇到錯誤繼續勾起
+
+Step14
+回client端遊戲程式內
+執行eat.exe吃檔，吃完便可點擊Login.exe登入遊戲
+進入遊戲前請先執行ServerStart.bat(位於Java Project資料夾內)

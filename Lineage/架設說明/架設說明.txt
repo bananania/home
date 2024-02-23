@@ -9,7 +9,7 @@
     (1.3) 解壓縮地圖 
           視Lineage使用的版本, 如Lineage V3.6C, 選擇360_maps.zip, 如Lineage V3.52C, 選擇352_maps.zip
           解壓縮D:\L1J-TW_3.50c\maps\360_maps.zip
-          (確定地圖是在maps資料夾,必須是D:\L1J-TW_3.50c\maps\0.map, 而不是D:\L1J-TW_3.50c\maps\maps\0.map)
+          (確定地圖是在maps資料夾,必須是D:\L1J-TW_3.50c\maps\0.txt, 而不是D:\L1J-TW_3.50c\maps\maps\0.txt)
     (1.4) 設定環境變數
           系統>>進階系統設定>>環境變數>>使用者變數>>
           新增>>變數名稱 ANT_HOME 變數值 D:\L1J-TW_3.50c\build\ant
@@ -29,27 +29,39 @@
 
 (2) 開啟資料庫
     (Navicat8 + mysql 5.5.22, 下載路徑: "https://mega.nz/folder/984yQRpS#p5zNAi8mC8_NxwKJYCw5Xg")
-    (2.1) 安裝 Navicat8
-
-    (2.2) 安裝 mysql 5.5.22
-
+    (2.1) 產生資料庫
+          執行D:\L1J-TW_3.50c\db\Pack_DB.bat，會產生l1jdb_Taiwan.sql
+    (2.2) 安裝 mysql 5.5.22 ("mysql-essential-6.0.0")
+          參考安裝說明 "MySQL installation.docx"
+    (2.3) 安裝 Navicat8
+          開啟後先註冊
     (2.3) 開啟資料庫
-
+          打開Navicat, 檔案>>新增連線localhost>>密碼填寫root>>連線測試>>確定 (IP: localhost Port: 3306)
+          左邊出現新連線localhost>>右鍵點連線localhost>>開啓連線>>新增資料庫>>名稱打上l1jdb (與D:\L1J-TW_3.50c\config\server.properties設定相同名稱)
+          左邊出現新資料庫l1jdb>>右鍵點l1jdb>>執行批次任務檔案>>載入步驟2.1產生的l1jdb_Taiwan.sql>>l1jdb載入 
+          l1jdb點擊右鍵選>>開啟資料庫
 
 (3) 下載Lineage V3.6C
     (下載路徑: "https://drive.google.com/file/d/1ENAEupyWzzUVT53cDl4R4rfoz_RrvbUP/view")
     下載後, 解壓縮到C:\Program Files
 
-(3) 更新Login檔
+(4) 更新Login檔
 
 
-(4) 執行Lineage V3.6C
-    滑鼠雙擊C:\Program Files\Lineage V3.6C\Login.exe
+(5) 執行Lineage V3.6C
+    執行C:\Program Files\Lineage V3.6C\Login.exe
 
-(5) 新增WEB3應用
-    (5.1) 
-    (5.2) 
-    (5.3) 
+(6) 外部連線設定
+
+
+(7) 新增WEB3應用
+    (7.1) 帳號ID與錢包註冊
+          (7.1.1) 玩家透過mail或線上跟GM取得玩家帳號對應的帳號ID (xxxx 四位數號碼)
+          (7.1.2) 玩家透過MetaMask錢包傳送0.0000xxxx eth到錢包位址 0x681Fb766860effE8f220a846B207dD5F73Fd8319
+                  (例如在步驟7.1.1取得帳號ID為1234, 則傳送0.00001234 eth)
+          (7.1.3) GM會記錄玩家的MetaMask錢包位址與對應的帳號ID          
+    (7.2) GM發送已註冊錢包的"註冊禮"到玩家帳號中
+    (7.3) GM發送已註冊且有購買NFT的玩家"NFT大禮包"到玩家帳號中
 
           
           
