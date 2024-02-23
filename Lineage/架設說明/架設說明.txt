@@ -28,7 +28,12 @@
           在D:\L1J-TW_3.50c資料夾, 滑鼠雙擊ServerStart.bat, 正常跑完表示, Server已開啟, 等待使用者進入
 
 (2) 開啟資料庫
+    (Navicat8 + mysql 5.5.22, 下載路徑: "https://mega.nz/folder/984yQRpS#p5zNAi8mC8_NxwKJYCw5Xg")
+    (2.1) 安裝 Navicat8
 
+    (2.2) 安裝 mysql 5.5.22
+
+    (2.3) 開啟資料庫
 
 
 (3) 下載Lineage V3.6C
