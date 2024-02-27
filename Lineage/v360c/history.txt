@@ -74,7 +74,7 @@ S04: 下載Lineage V3.6.0C, 解壓縮到C:\Program Files
 
 S05: 複製Login登入器所有檔案到C:\Program Files\Lineage V3.6.0C
 
-S06: 執行C:\Program Files\Lineage V3.6.0C\Login.exe
+S06: 執行C:\Program Files\Lineage V3.6.0C\Login.exe (Win10,Win11 OS, 需將Login.exe按右鍵..內..相容模式..改為相容Win7)
 
 ==============================================================================================
 B01: 修改設定
