@@ -80,6 +80,9 @@ B01: 修改設定
 
 B02: 新增功能
 
+B03: DB Modify GM's Access_Level from 0 to 200 in characters.sql
+     DB GM commands list in commands.sql   
+
 ==============================================================================================
 V00: 製作官網
 V01: 製作連外登入器
