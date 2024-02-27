@@ -1,5 +1,6 @@
 Bananania v380c history
 =======================
+Please indicate the source when quoting "https://bananania.github.io/home/"
 
 S01: v380c building and running
     1. Download and install GitHub Desltop from "https://desktop.github.com/"
