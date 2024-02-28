@@ -10,6 +10,7 @@ S00: unzip v350c/maps/360_maps.zip to v380c/maps/0.txt...
      verify login.exe compatibility to support win7...
      verify JAVA_PATH, ANT_PATH, classpath
      in dos mode, change direct to d:/v380c, execute ant to build
+     makesure db/npc.sql id is npc not npcxxxxxx
 
 S01: v380c building and running
     1. Download and install GitHub Desltop from "https://desktop.github.com/"
