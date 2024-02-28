@@ -2,8 +2,14 @@ Bananania v380c history
 =======================
 Please indicate the source when quoting "https://bananania.github.io/home/"
 
-S01: unzip v350c/maps/360_maps.zip to v380c/maps/0.txt...
-
+S00: unzip v350c/maps/360_maps.zip to v380c/maps/0.txt...
+     configuration: alsettings/AutoRoot=2, Server/DB name l1jtw, and rates
+     db/Pack_DB.bat
+     MySQL: create connecting name localhost, add DB name l1jtw, then open DB and execute object file: l1jdb_Taiwan.sql, reopen DB once.
+     copy all of login files to lineage v3.8.1
+     verify login.exe compatibility to support win7...
+     verify JAVA_PATH, ANT_PATH, classpath
+     in dos mode, change direct to d:/v380c, execute ant to build
 
 S01: v380c building and running
     1. Download and install GitHub Desltop from "https://desktop.github.com/"
