@@ -2,6 +2,9 @@ Bananania v380c history
 =======================
 Please indicate the source when quoting "https://bananania.github.io/home/"
 
+S01: unzip v350c/maps/360_maps.zip to v380c/maps/0.txt...
+
+
 S01: v380c building and running
     1. Download and install GitHub Desltop from "https://desktop.github.com/"
     2. Clone "https://github.com/NewSvn/l1j-tw-99nets/L1J-TW_3.80c"
