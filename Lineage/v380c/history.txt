@@ -33,7 +33,9 @@ v380c架設步驟:
         左邊欄位出現新資料庫l1jtw>>右鍵點l1jtw開啟>>右鍵點l1jtw>>執行批次任務檔案>>載入步驟7產生的l1jdb_Taiwan.sql>>l1jtw載入 
         l1jtw點擊右鍵選>>關閉資料庫>>右鍵點localhost>>關閉連線 (正常後, 先關閉Navicat, 都弄好再開)
     17. 下載 "主程式 Lineage 3.8.1", 可以放在 C:\Program Files 資料夾
+        (下載路徑: "https://game155.com/thread-327947-1-1.html")
     18. 下載 "Login_v380登入器" (可以在 "https://lineage45.com/" 查找登入器 (需註冊, 如bananania / fx), 版本要對, 要小心, 都是這個東東會偵測到病毒 
+        (下載路徑 "https://github.com/bananania/home/tree/main/Lineage/%E6%9E%B6%E8%A8%AD%E8%BB%9F%E9%AB%94")
     19. 進入 "Login_v380登入器" 的 "編輯器資料夾" 內, 執行 Encode, 製作新的登入器 (連線燈號可打開)
     20. 複製 "編輯器資料夾" 新產生的 Login.exe, Login.ini, Login.cfg 到 "登入器資料夾"
     21. 複製 "Login_v380登入器" 的 "登入器資料夾" 內所有檔案, 覆蓋到 "C:\Program Files\Lineage 3.8.1"
