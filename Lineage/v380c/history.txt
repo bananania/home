@@ -112,6 +112,7 @@ v350c:
    招喚 Boss, 可以找 spawnlist_boss.sql 的 npc_id, 如死騎 ID, ".spawn 45601 2 5" 在5格範圍內招喚2隻
    新增武器, 查詢 weapon.sql 武器編號. 如 ".item 294 1 50 1" 1 隻特製的耀武短劍+50 有鑑定的
 8. localhost即IP 127.0.0.1即單機版, 改連外需修改成伺服器連外的IP, 重新製作登入器覆蓋到主程式資料夾 (連外IP才會有被外部攻擊的風險, 連外前需先搞定防火牆避免風險)
+9. 順移會超出地圖, 下載 MAP_TOOL 參考 ("https://lineage45.com/forum.php?mod=viewthread&tid=86729&highlight=%E7%9E%AC%E7%A7%BB%E6%9C%83%E8%B6%85%E5%87%BA%E5%9C%B0%E5%9C%96")
 
 =======================
 以下參考用 ===========
