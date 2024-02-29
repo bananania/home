@@ -1,19 +1,122 @@
+=======================
 Bananania v380c history
 =======================
 Please indicate the source when quoting "https://bananania.github.io/home/"
 
-S00: unzip v350c/maps/360_maps.zip to v380c/maps/0.txt...
-     configuration: alsettings/AutoRoot=2, Server/DB name l1jtw, and rates
-     db/Pack_DB.bat
-     MySQL: create connecting name localhost, add DB name l1jtw, then open DB and execute object file: l1jdb_Taiwan.sql, reopen DB once.
-     copy all of login files to lineage v3.8.1
-     verify login.exe compatibility to support win7...
-     verify JAVA_PATH, ANT_PATH, classpath
-     in dos mode, change direct to d:/v380c, execute ant to build
-     makesure db/npc.sql id is npc not npcxxxxxx
+v380c架設步驟:
+    1. 使用 "GitHub Desktop" Git 版本控制軟件
+    2. 使用 "GitHub Desktop" clone "v380c" 原始檔
+    3. 使用 "GitHub Desktop" clone "v350c" 原始檔
+    4. v380c資料夾內新增一個maps資料夾, 複製 v350c/maps/360_maps.zip 到 v380c/maps 資料夾中
+    5. 解壓縮 \v380c\maps\360_maps.zip (確定地圖是在maps資料夾,必須是 \v380c\maps\0.txt, 而不是 \v380c\maps\maps\0.txt)
+    6. 修改伺服器設定, \v380c\config資料夾內
+       修改 alsettings 的 AutoRoot 設為2 (改東西掉落在身上)
+       查看 server 第14行 URL=jdbc:mysql://localhost/l1jtw?useUnicode=true&characterEncoding=utf8, l1jtw 即是 DB 所使用的資料庫名稱
+       查看 rates 調整倍率
+    7. 執行 \v380c\db\Pack_DB.bat 會得 l1jdb_Taiwan.sql, 稍後準備匯入 MySQL 資料庫的檔案
+    8. 下載 Navicat8 與 MySQL, 下載路徑 "https://mega.nz/folder/984yQRpS#p5zNAi8mC8_NxwKJYCw5Xg"
+    9. "安裝 Navicat8" 與 "安裝 MySQL 5.5.22"
+    10. 安裝JAVA jdk1.7.0_79 (編譯用), 下載路徑 "https://www.oracle.com/tw/java/technologies/javase/javase7-archive-downloads.html"
+    11. 設定 JAVA 與 編譯器的執行路徑
+        在系統>>進階系統設定>>環境變數>>使用者變數中
+        新增 ANT_HOME D:\v380c\build\ant
+        新增 JAVA_HOME C:\Program Files\java\jdk1.7.0_79
+        新增 classpath .
+        編輯 Path, 在 Path 列表中, 新增 %ANT_HOME%\bin 與 %JAVA_HOME%\bin
+    12. 以上步驟完成後, 即可編譯開啟伺服器所需的檔案 l1jserver.jar
+    13. 執行 cmd 到 DOS 模式下, 切換到 v380c 資料夾, 如 D:\v380c ("D:", "cd v380c")
+    14. 執行 ant ("ant"), 編譯完成會產生新的 l1jserver.jar (如有修改 config 或 原始檔, 需重新編譯產生新的 l1jserver.jar)
+    15. 開啟伺服器 (執行 ServerStart.bat), 正常後, 先關閉視窗即關閉伺服器, 都弄好再開 
+    16. 開啟資料庫
+        打開Navicat, 檔案>>新增連線localhost>>密碼填寫root>>連線測試>>確定 (IP: localhost Port: 3306)
+        左邊欄位出現新連線localhost>>右鍵點連線localhost>>開啓連線>>新增資料庫>>名稱打上l1jtw (如步驟6, 需與D:\v380c\config\server.properties設定相同名稱)
+        左邊欄位出現新資料庫l1jtw>>右鍵點l1jtw開啟>>右鍵點l1jtw>>執行批次任務檔案>>載入步驟7產生的l1jdb_Taiwan.sql>>l1jtw載入 
+        l1jtw點擊右鍵選>>關閉資料庫>>右鍵點localhost>>關閉連線 (正常後, 先關閉Navicat, 都弄好再開)
+    17. 下載 "主程式 Lineage 3.8.1", 可以放在 C:\Program Files 資料夾
+    18. 下載 "Login_v380登入器" (可以在 "https://lineage45.com/" 查找登入器 (需註冊, 如bananania / fx), 版本要對, 要小心, 都是這個東東會偵測到病毒 
+    19. 進入 "Login_v380登入器" 的 "編輯器資料夾" 內, 執行 Encode, 製作新的登入器 (連線燈號可打開)
+    20. 複製 "編輯器資料夾" 新產生的 Login.exe, Login.ini, Login.cfg 到 "登入器資料夾"
+    21. 複製 "Login_v380登入器" 的 "登入器資料夾" 內所有檔案, 覆蓋到 "C:\Program Files\Lineage 3.8.1"
+    22. 開啟 DB (如步驟16, 右鍵點localhost>>開啓連線, 右鍵點l1jtw開啟)
+        開啟伺服器 (如步驟15)
+        執行 C:\Program Files\Lineage 3.8.1\Login.exe (創角登入遊戲後, 參考如下"延伸除錯-7", 修改為 GM 角色)
 
+    23. 執行版本: v380c + v380c DB + 360_maps + Login_v380登入器 + 主程式 Lineage 3.8.1
+
+    Note: 開啟順序 (開啟 DB ==> 開啟伺服器)
+          關閉順序 (關閉伺服器 ==> 關閉 DB)
+          關閉後, DB 定時備份          
+
+=======================
+詳細說明 =============
+=======================
+主程式 Lineage 3.8.1:
+    下載路徑
+GitHub Desktop:
+    下載路徑 "https://desktop.github.com/", 使用前需註冊 (Ex: banananiagm@gmail.com / password (same as office) )
+v380c:
+    clone "https://github.com/bananania/home/Lineage/v380c"
+v350c: 
+    clone "https://github.com/bananania/home/Lineage/v350c"
+安裝 "Navicat8:
+    順著步驟安裝即可, 內有註冊序號
+安裝 MySQL 5.5.22:
+    順著安裝到步驟9, 依如下安裝
+    Step9:
+         V Detailed Configuration
+           Standard Configuration
+    Step10:
+           Developer Machine
+         V Server Machine
+           Dedicated MySQL Server Machine
+     Step11:
+         V Multifunctional Database
+           Transactional Database Only
+           Non-TransactionalDatabase Only
+     Step12: click Next to install continue
+     Step13:
+           Decision Support (DSS)/OLAP
+         V Online Transaction Processing (OCTP)
+           Manual Setting
+     Step14:
+         V Enble TCP/IP Networking, Port Number: 3306
+         V Enable Strict Mode
+     Step15:
+         V Standard Character Set
+           Best Support For Multilingualism
+           Manual Selected Default Character Set
+     Step16:
+         V Install As Windows Service, Service Name: MySQL, Select (V) Launch the MySQL Server Automatically
+         V Include Bin Directory in Windows PATH
+     Step17:
+         V Modify Security Settings, New root password: root, Confirm: root
+           Create An Anonymous Account
+     Step18: click Next to install continue
+     Step19: it will show all pass for 4 items
+     Step20: click Finish
+
+=======================
+延伸除錯==============
+=======================
+1. ant 編譯時發生 encode, decode 警告可以忽略, 不影響 (只是警告 sun.misc Library 可能會變動)
+2. 如載入時發生droplist.sql錯誤, 代表有缺少或多了一個欄位`enchantlvl` int(11) unsigned NOT NULL DEFAULT '0',
+   可以參考 "https://github.com/NewSvn/l1j-tw-99nets/L1J-TW_3.50c\db\droplist.sql
+3. db/npc.sql id is npc not npcxxxxxx
+4. 若發生
+5. 打字閃...win10之後版本會有, 試過網路上使用舊的輸入法沒用, 應該跟畫面比例有關
+6. 可以設為 1024x768 遊戲效果較好
+7. 角色修改為GM
+   先創角後登出, 開啟l1jtw DB, 找到 characters.sql 內的 Access_Level 修改數值為 200 後, 再登入角色即可.
+   GM commands 在 command.sql 內可找到, 如 
+   增加 Buff, 在遊戲對話欄內打 ".allbuff 角色ID",
+   招喚 Boss, 可以找 spawnlist_boss.sql 的 npc_id, 如死騎 ID, ".spawn 45601 2 5" 在5格範圍內招喚2隻
+8. localhost即IP 127.0.0.1即單機版, 改連外需修改成伺服器連外的IP, 重新製作登入器覆蓋到主程式資料夾 (連外IP才會有被外部攻擊的風險, 連外前需先搞定防火牆避免風險)
+
+=======================
+以下參考用 ===========
+=======================
 S01: v380c building and running
-    1. Download and install GitHub Desltop from "https://desktop.github.com/"
+    1. Download and install GitHub Desktop from "https://desktop.github.com/"
     2. Clone "https://github.com/NewSvn/l1j-tw-99nets/L1J-TW_3.80c"
     3. Download and install JAVA jdk1.7.0_79 "jdk-7u79-windows-x64.exe" 
        from "https://www.oracle.com/tw/java/technologies/javase/javase7-archive-downloads.html"
