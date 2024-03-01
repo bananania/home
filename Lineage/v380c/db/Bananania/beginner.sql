@@ -40,4 +40,4 @@ INSERT INTO `beginner` VALUES ('5', '292', '1', '0', '0', '耀武之弩', 'E', '
 INSERT INTO `beginner` VALUES ('6', '293', '1', '0', '0', '耀武魔杖', 'W', '1');
 INSERT INTO `beginner` VALUES ('7', '291', '1', '0', '0', '耀武雙刀', 'D', '1');
 INSERT INTO `beginner` VALUES ('8', '289', '1', '0', '0', '耀武短劍', 'R', '1');
-INSERT INTO `beginner` VALUES ('9', '292', '1', '0', '0', '耀武之弩', 'I', '1');
+INSERT INTO `beginner` VALUES ('9', '293', '1', '0', '0', '耀武魔杖', 'I', '1');
