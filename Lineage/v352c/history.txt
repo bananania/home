@@ -1,0 +1,103 @@
+Bananania v360c history
+=======================
+Please indicate the source when quoting "https://bananania.github.io/home/"
+
+S01: v360c building and running
+    1. Download and install GitHub Desltop from "https://desktop.github.com/"
+    2. Clone "https://github.com/NewSvn/l1j-tw-99nets/L1J-TW_3.50c"
+    3. Download and install JAVA jdk1.7.0_79 "jdk-7u79-windows-x64.exe" 
+       from "https://www.oracle.com/tw/java/technologies/javase/javase7-archive-downloads.html"
+       by banananiagm@gmail.com / 1x
+    4. Setup building path 系統..進階系統設定..環境變數..使用者變數
+       Add ANT_HOME D:\v380c\build\ant
+       Add JAVA_HOME C:\Program Files\java\jdk1.7.0_79
+       Add classpath .
+       Edit Path Add %ANT_HOME%\bin and %JAVA_HOME%\bin
+    5. 解壓縮地圖 
+       如Lineage V3.6.0C, 選擇360_maps.zip, 如Lineage V3.52C, 選擇352_maps.zip
+       (360_maps.zip在L1J-TW_3.80c中沒有, 需複製L1J-TW_3.50c\maps\360_maps.zip, 下載路徑"https://github.com/NewSvn/l1j-tw-99nets/L1J-TW_3.50c")
+       解壓縮D:\v360c\maps\360_maps.zip
+       (確定地圖是在maps資料夾,必須是D:\v360c\maps\0.txt, 而不是D:\v360c\maps\maps\0.txt)
+    6. 執行 cmd then goto D:\v360c direct
+    7. Type "ant" for building. You will get a l1jserver.jar file if building pass.
+       7.1 found an error about droplist.sql, it could be fixed 
+           by "https://github.com/NewSvn/l1j-tw-99nets/L1J-TW_3.80c\db\droplist.sql
+    8. Run ServerStart.bat
+
+S02: DB creating and running
+    1. Download Navicat8 + mysql 5.5.22 from "https://mega.nz/folder/984yQRpS#p5zNAi8mC8_NxwKJYCw5Xg"
+    2. Install Navicat8 and crash it first
+    3. Install mysql 5.5.22, and follow following installation guide.
+       Step9:
+           V Detailed Configuration
+             Standard Configuration
+       Step10:
+             Developer Machine
+           V Server Machine
+             Dedicated MySQL Server Machine
+       Step11:
+           V Multifunctional Database
+             Transactional Database Only
+             Non-TransactionalDatabase Only
+       Step12: click Next to install continue
+       Step13:
+             Decision Support (DSS)/OLAP
+           V Online Transaction Processing (OCTP)
+             Manual Setting
+       Step14:
+           V Enble TCP/IP Networking, Port Number: 3306
+           V Enable Strict Mode
+       Step15:
+           V Standard Character Set
+             Best Support For Multilingualism
+             Manual Selected Default Character Set
+       Step16:
+           V Install As Windows Service, Service Name: MySQL, Select (V) Launch the MySQL Server Automatically
+           V Include Bin Directory in Windows PATH
+       Step17:
+           V Modify Security Settings, New root password: root, Confirm: root
+             Create An Anonymous Account
+       Step18: click Next to install continue
+       Step19: it will show all pass for 4 items
+       Step20: click Finish
+    4. Execute D:\v360c\db\Pack_DB.bat, you will get a DB file l1jdb_Taiwan.sql
+    5. 打開Navicat, 檔案>>新增連線localhost>>密碼填寫root>>連線測試>>確定 (IP: localhost Port: 3306)
+       左邊欄位出現新連線localhost>>右鍵點連線localhost>>開啓連線>>新增資料庫>>名稱打上l1jdb (與D:\v360c\config\server.properties設定相同名稱)
+       左邊欄位出現新資料庫l1jtw>>右鍵點l1jtw>>執行批次任務檔案>>載入步驟4產生的l1jdb_Taiwan.sql>>l1jdb載入 
+       l1jdb點擊右鍵選>>開啟資料庫
+    6. 如載入時發生droplist.sql錯誤, 代表有缺少一個欄位`enchantlvl` int(11) unsigned NOT NULL DEFAULT '0',
+       可以複製 "https://github.com/NewSvn/l1j-tw-99nets/L1J-TW_3.80c\db\droplist.sql
+
+S03: 製作Login登入器
+
+S04: 下載Lineage V3.6.0C, 解壓縮到C:\Program Files
+
+S05: 複製Login登入器所有檔案到C:\Program Files\Lineage V3.6.0C
+
+S06: 執行C:\Program Files\Lineage V3.6.0C\Login.exe (Win10,Win11 OS, 需將Login.exe按右鍵..內..相容模式..改為相容Win7)
+
+==============================================================================================
+B01: 修改設定
+
+B02: 新增功能
+
+B03: DB Modify GM's Access_Level from 0 to 200 in characters.sql
+     DB GM commands list in commands.sql   
+
+==============================================================================================
+V00: 製作官網
+V01: 製作連外登入器
+V02: 在官網提供下載 Lineage V3.6.0, Login 登入器
+
+    
+              
+       
+           
+ 
+
+
+
+    
+    
+
+        
