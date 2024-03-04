@@ -178,4 +178,7 @@ public class L1ItemId {
 
 	/** 金幣 */
 	public static final int ADENA = 40308;
+	
+	/** 香蕉幣 */
+	public static final int BANANA = 240062;
 }
