@@ -34,10 +34,12 @@ CREATE TABLE `beginner` (
 -- ----------------------------
 INSERT INTO `beginner` VALUES ('1', '40641', '1', '0', '0', '說話卷軸', 'A', '1');
 INSERT INTO `beginner` VALUES ('2', '49309', '1', '0', '0', '象牙塔箭筒', 'E', '1');
-INSERT INTO `beginner` VALUES ('3', '289', '1', '0', '0', '耀武短劍', 'P', '1');
-INSERT INTO `beginner` VALUES ('4', '290', '1', '0', '0', '耀武雙手劍', 'K', '1');
-INSERT INTO `beginner` VALUES ('5', '292', '1', '0', '0', '耀武之弩', 'E', '1');
-INSERT INTO `beginner` VALUES ('6', '293', '1', '0', '0', '耀武魔杖', 'W', '1');
-INSERT INTO `beginner` VALUES ('7', '291', '1', '0', '0', '耀武雙刀', 'D', '1');
-INSERT INTO `beginner` VALUES ('8', '289', '1', '0', '0', '耀武短劍', 'R', '1');
-INSERT INTO `beginner` VALUES ('9', '293', '1', '0', '0', '耀武魔杖', 'I', '1');
+INSERT INTO `beginner` VALUES ('3', '232', '1', '0', '0', '香蕉之劍', 'P', '1');
+INSERT INTO `beginner` VALUES ('4', '233', '1', '0', '0', '香蕉巨劍', 'K', '1');
+INSERT INTO `beginner` VALUES ('5', '239', '1', '0', '0', '香蕉之弓', 'E', '1');
+INSERT INTO `beginner` VALUES ('6', '238', '1', '0', '0', '香蕉魔杖', 'W', '1');
+INSERT INTO `beginner` VALUES ('7', '236', '1', '0', '0', '香蕉雙刀', 'D', '1');
+INSERT INTO `beginner` VALUES ('8', '233', '1', '0', '0', '香蕉巨劍', 'R', '1');
+INSERT INTO `beginner` VALUES ('9', '238', '1', '0', '0', '香蕉魔杖', 'I', '1');
+INSERT INTO `beginner` VALUES ('10', '40010', '500', '0', '0', '治癒藥水', 'A', '1');
+INSERT INTO `beginner` VALUES ('11', '40013', '50', '0', '0', '自我加速藥水', 'A', '1');
