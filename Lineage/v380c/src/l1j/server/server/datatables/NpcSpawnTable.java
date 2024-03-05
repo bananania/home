@@ -73,6 +73,12 @@ public class NpcSpawnTable {
 						continue;
 					}
 				}
+				if (Config.ALT_BANANA == false) {
+					int npcid = rs.getInt(33);
+					if ((npcid >= Config.ALT_BANANA_MIN_ID) && (npcid <= Config.ALT_BANANA_MAX_ID)) {
+						continue;
+					}
+				}
 				if (Config.ALT_HALLOWEENIVENT == false) {
 					int npcid = rs.getInt("id");
 					if (((npcid >= 130852) && (npcid <= 130862)) || ((npcid >= 26656) && (npcid <= 26734)) 
