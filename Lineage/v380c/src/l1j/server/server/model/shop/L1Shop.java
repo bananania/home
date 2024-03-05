@@ -144,11 +144,21 @@ public class L1Shop {
 			return false;
 		}
 		// 購入できるかチェック
-		if (!pc.getInventory().checkItem(L1ItemId.ADENA, price)) {
-			System.out.println(price);
-			// \f1アデナが不足しています。
-			pc.sendPackets(new S_ServerMessage(189));
-			return false;
+		if ( (Config.ALT_BANANA == true) && ((_npcId >= Config.ALT_BANANA_MIN_ID) && (_npcId <= Config.ALT_BANANA_MAX_ID)) ) {
+			if (!pc.getInventory().checkItem(L1ItemId.BANANA, price)) {
+			    System.out.println(price);
+			    // \f1アデナが不足しています。
+			    pc.sendPackets(new S_ServerMessage("香蕉幣不足"));
+			    return false;
+		    }
+		}
+		else {
+		    if (!pc.getInventory().checkItem(L1ItemId.ADENA, price)) {
+			    System.out.println(price);
+			    // \f1アデナが不足しています。
+			    pc.sendPackets(new S_ServerMessage(189));
+			    return false;
+		    }
 		}
 		// 重量チェック
 		int currentWeight = pc.getInventory().getWeight() * 1000;
@@ -281,8 +291,15 @@ public class L1Shop {
 	 * 販売取引
 	 */
 	private void sellItems(L1PcInventory inv, L1ShopBuyOrderList orderList) {
-		if (!inv.consumeItem(L1ItemId.ADENA,orderList.getTotalPriceTaxIncluded())) {
-			throw new IllegalStateException("購入に必要なアデナを消費できませんでした。");
+		if ( (Config.ALT_BANANA == true) && ((_npcId >= Config.ALT_BANANA_MIN_ID) && (_npcId <= Config.ALT_BANANA_MAX_ID)) ) {
+		    if (!inv.consumeItem(L1ItemId.BANANA,orderList.getTotalPriceTaxIncluded())) {
+			    throw new IllegalStateException("購入に必要なアデナを消費できませんでした。");
+		    }
+		}
+		else {
+			if (!inv.consumeItem(L1ItemId.ADENA,orderList.getTotalPriceTaxIncluded())) {
+			    throw new IllegalStateException("購入に必要なアデナを消費できませんでした。");
+		    }
 		}
 		for (L1ShopBuyOrder order : orderList.getList()) {
 			int itemId = order.getItem().getItemId();
