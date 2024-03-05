@@ -1005,6 +1005,7 @@ INSERT INTO `npcaction` VALUES ('80143', 'azel1', 'azel1', '', '');
 INSERT INTO `npcaction` VALUES ('80144', 'rark1', 'rark1', '', '');
 INSERT INTO `npcaction` VALUES ('80145', 'silrein1', 'silrein1', '', '');
 INSERT INTO `npcaction` VALUES ('80146', 'sharial1', 'sharial1', 'sharial2', 'sharial3');
+INSERT INTO `npcaction` VALUES ('81001', 'pandora', 'pandora', '', '');
 INSERT INTO `npcaction` VALUES ('81002', 'pandora', 'pandora', '', '');
 INSERT INTO `npcaction` VALUES ('81003', 'pandora', 'pandora', '', '');
 INSERT INTO `npcaction` VALUES ('81004', 'pandora', 'pandora', '', '');
