@@ -18,6 +18,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import l1j.server.Config;
 import l1j.server.L1DatabaseFactory;
 import l1j.server.server.model.Instance.L1ItemInstance;
 import l1j.server.server.model.Instance.L1PcInstance;
@@ -39,18 +40,35 @@ public class L1ItemCheck {
 		if ((findWeapon() || findArmor()) && itemCount != 1) {
 			isCheat = true;
 		} else if (findEtcItem()) {
-			// 不可堆疊的道具卻堆疊，就視為作弊
-			if (!isStackable && itemCount != 1) {
-				isCheat = true;
-				// 金幣大於20億以及金幣負值則為作弊
-			} else if (itemId == L1ItemId.ADENA
-					&& (itemCount > 2000000000 || itemCount < 0)) {
-				isCheat = true;
-				// 可堆疊道具(金幣除外)堆疊超過十萬個以及堆疊負值設定為作弊
-			} else if (isStackable && itemId != L1ItemId.ADENA
-					&& (itemCount > 100000 || itemCount < 0)) {
-				isCheat = true;
+			if (Config.ALT_BANANA == true) {
+			    // 不可堆疊的道具卻堆疊，就視為作弊
+			    if (!isStackable && itemCount != 1) {
+			    	isCheat = true;
+			    	// 金幣大於20億以及金幣負值則為作弊
+			    } else if ((itemId == L1ItemId.ADENA || itemId == L1ItemId.BANANA)
+			    		&& (itemCount > 2000000000 || itemCount < 0)) {
+			    	isCheat = true;
+			    	// 可堆疊道具(金幣除外)堆疊超過十萬個以及堆疊負值設定為作弊
+			    } else if (isStackable && itemId != L1ItemId.ADENA && itemId != L1ItemId.BANANA
+			    		&& (itemCount > 100000 || itemCount < 0)) {
+			    	isCheat = true;
+			    }
 			}
+			else {
+			    // 不可堆疊的道具卻堆疊，就視為作弊
+			    if (!isStackable && itemCount != 1) {
+			    	isCheat = true;
+			    	// 金幣大於20億以及金幣負值則為作弊
+			    } else if (itemId == L1ItemId.ADENA
+			    		&& (itemCount > 2000000000 || itemCount < 0)) {
+			    	isCheat = true;
+			    	// 可堆疊道具(金幣除外)堆疊超過十萬個以及堆疊負值設定為作弊
+			    } else if (isStackable && itemId != L1ItemId.ADENA
+			    		&& (itemCount > 100000 || itemCount < 0)) {
+			    	isCheat = true;
+			    }
+		    }
+			
 		}
 		if (isCheat) {
 			// 作弊直接刪除物品
