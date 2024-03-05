@@ -148,7 +148,7 @@ public class L1Shop {
 			if (!pc.getInventory().checkItem(L1ItemId.BANANA, price)) {
 			    System.out.println(price);
 			    // \f1アデナが不足しています。
-			    pc.sendPackets(new S_ServerMessage("香蕉幣不足"));
+			    pc.sendPackets(new S_ServerMessage(189));
 			    return false;
 		    }
 		}
