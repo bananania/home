@@ -29,11 +29,11 @@ CREATE TABLE `castle` (
 -- ----------------------------
 -- Records 
 -- ----------------------------
-INSERT INTO `castle` VALUES ('1', '肯特城', '2009-10-06 19:41:01', '10', '4973002');
-INSERT INTO `castle` VALUES ('2', '妖魔城', '2009-10-06 19:41:01', '10', '1205');
-INSERT INTO `castle` VALUES ('3', '風木城', '2009-10-06 19:41:01', '10', '7790772');
-INSERT INTO `castle` VALUES ('4', '奇岩城', '2009-10-06 19:41:01', '10', '2858838');
+INSERT INTO `castle` VALUES ('1', '肯特城', '2024-03-10 20:00:00', '10', '0');
+INSERT INTO `castle` VALUES ('2', '妖魔城', '2009-10-06 19:41:01', '10', '0');
+INSERT INTO `castle` VALUES ('3', '風木城', '2009-10-06 19:41:01', '10', '0');
+INSERT INTO `castle` VALUES ('4', '奇岩城', '2009-10-06 19:41:01', '10', '0');
 INSERT INTO `castle` VALUES ('5', '海音城', '2009-10-06 19:41:01', '10', '0');
-INSERT INTO `castle` VALUES ('6', '侏儒城', '2009-10-06 19:41:01', '10', '259622');
-INSERT INTO `castle` VALUES ('7', '亞丁城', '2009-10-06 19:41:01', '10', '1765500');
-INSERT INTO `castle` VALUES ('8', '狄亞得要塞', '2009-10-06 19:41:01', '10', '53117156');
+INSERT INTO `castle` VALUES ('6', '侏儒城', '2009-10-06 19:41:01', '10', '0');
+INSERT INTO `castle` VALUES ('7', '亞丁城', '2009-10-06 19:41:01', '10', '0');
+INSERT INTO `castle` VALUES ('8', '狄亞得要塞', '2009-10-06 19:41:01', '10', '0');
