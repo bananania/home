@@ -60,7 +60,14 @@ public class S_ShopSellList extends ServerBasePacket {
 		for (int i = 0; i < shopItems.size(); i++) {
 			L1ShopItem shopItem = shopItems.get(i);
 			L1Item item = shopItem.getItem();
-			int price = calc.layTax((int) (shopItem.getPrice() * Config.RATE_SHOP_SELLING_PRICE));
+			//int price = calc.layTax((int) (shopItem.getPrice() * Config.RATE_SHOP_SELLING_PRICE));
+			int price;
+			if ( (Config.ALT_BANANA == true) && ((npcId >= Config.ALT_BANANA_MIN_ID) && (npcId <= Config.ALT_BANANA_MAX_ID)) ) {
+			    price = (int) (shopItem.getPrice() * Config.RATE_SHOP_SELLING_PRICE);
+		    }
+		    else {
+		    	price = calc.layTax((int) (shopItem.getPrice() * Config.RATE_SHOP_SELLING_PRICE));
+		    }
 			writeD(i);
 			writeH(shopItem.getItem().getGfxId());
 			writeD(price);

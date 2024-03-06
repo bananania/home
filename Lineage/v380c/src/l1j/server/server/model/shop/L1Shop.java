@@ -136,7 +136,14 @@ public class L1Shop {
 	 * @return 何らかの理由でアイテムを販売できない場合、false
 	 */
 	private boolean ensureSell(L1PcInstance pc, L1ShopBuyOrderList orderList) {
-		int price = orderList.getTotalPriceTaxIncluded();
+		//int price = orderList.getTotalPriceTaxIncluded();
+		int price; 
+		if ( (Config.ALT_BANANA == true) && ((_npcId >= Config.ALT_BANANA_MIN_ID) && (_npcId <= Config.ALT_BANANA_MAX_ID)) ) {
+			price = orderList.getTotalPrice();
+		}
+		else {
+			price = orderList.getTotalPriceTaxIncluded();
+		}
 		// オーバーフローチェック
 		if (!IntRange.includes(price, 0, 2000000000)) {
 			// 総販売価格は%dアデナを超過できません。
@@ -292,7 +299,7 @@ public class L1Shop {
 	 */
 	private void sellItems(L1PcInventory inv, L1ShopBuyOrderList orderList) {
 		if ( (Config.ALT_BANANA == true) && ((_npcId >= Config.ALT_BANANA_MIN_ID) && (_npcId <= Config.ALT_BANANA_MAX_ID)) ) {
-		    if (!inv.consumeItem(L1ItemId.BANANA,orderList.getTotalPriceTaxIncluded())) {
+		    if (!inv.consumeItem(L1ItemId.BANANA,orderList.getTotalPrice())) {
 			    throw new IllegalStateException("購入に必要なアデナを消費できませんでした。");
 		    }
 		}
