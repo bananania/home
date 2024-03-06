@@ -138,7 +138,7 @@ public class L1Shop {
 	private boolean ensureSell(L1PcInstance pc, L1ShopBuyOrderList orderList) {
 		//int price = orderList.getTotalPriceTaxIncluded();
 		int price; 
-		if ( (Config.ALT_BANANA == true) && ((_npcId >= Config.ALT_BANANA_MIN_ID) && (_npcId <= Config.ALT_BANANA_MAX_ID)) ) {
+		if ( (Config.ALT_BANANA == true) && (_npcId == 81001) ) { // 香蕉商人
 			price = orderList.getTotalPrice();
 		}
 		else {
@@ -151,7 +151,7 @@ public class L1Shop {
 			return false;
 		}
 		// 購入できるかチェック
-		if ( (Config.ALT_BANANA == true) && ((_npcId >= Config.ALT_BANANA_MIN_ID) && (_npcId <= Config.ALT_BANANA_MAX_ID)) ) {
+		if ( (Config.ALT_BANANA == true) && (_npcId == 81001) ) { // 香蕉商人
 			if (!pc.getInventory().checkItem(L1ItemId.BANANA, price)) {
 			    System.out.println(price);
 			    // \f1アデナが不足しています。			    
@@ -298,7 +298,7 @@ public class L1Shop {
 	 * 販売取引
 	 */
 	private void sellItems(L1PcInventory inv, L1ShopBuyOrderList orderList) {
-		if ( (Config.ALT_BANANA == true) && ((_npcId >= Config.ALT_BANANA_MIN_ID) && (_npcId <= Config.ALT_BANANA_MAX_ID)) ) {
+		if ( (Config.ALT_BANANA == true) && (_npcId == 81001) ) { // 香蕉商人
 		    if (!inv.consumeItem(L1ItemId.BANANA,orderList.getTotalPrice())) {
 			    throw new IllegalStateException("購入に必要なアデナを消費できませんでした。");
 		    }
@@ -371,7 +371,12 @@ public class L1Shop {
 		}
 
 		sellItems(pc.getInventory(), orderList);
-		payTax(orderList);
+		if ( (Config.ALT_BANANA == true) && (_npcId != 81001) ) { // 香蕉商人
+			payTax(orderList);
+		}
+		else {
+		    payTax(orderList);
+		}
 	}
 
 	/**

@@ -62,7 +62,7 @@ public class S_ShopSellList extends ServerBasePacket {
 			L1Item item = shopItem.getItem();
 			//int price = calc.layTax((int) (shopItem.getPrice() * Config.RATE_SHOP_SELLING_PRICE));
 			int price;
-			if ( (Config.ALT_BANANA == true) && ((npcId >= Config.ALT_BANANA_MIN_ID) && (npcId <= Config.ALT_BANANA_MAX_ID)) ) {
+			if ( (Config.ALT_BANANA == true) && (npcId == 81001) ) { // 香蕉商人
 			    price = (int) (shopItem.getPrice() * Config.RATE_SHOP_SELLING_PRICE);
 		    }
 		    else {

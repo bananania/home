@@ -75,7 +75,7 @@ public class NpcSpawnTable {
 				}
 				if (Config.ALT_BANANA == false) {
 					int npcid = rs.getInt(33);
-					if ((npcid >= Config.ALT_BANANA_MIN_ID) && (npcid <= Config.ALT_BANANA_MAX_ID)) {
+					if (npcid == Config.ALT_BANANA_ID) {
 						continue;
 					}
 				}

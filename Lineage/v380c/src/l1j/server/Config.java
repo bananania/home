@@ -204,9 +204,7 @@ public final class Config {
 	
 	public static boolean ALT_BANANA;
 
-	public static int ALT_BANANA_MIN_ID;
-
-	public static int ALT_BANANA_MAX_ID;
+	public static int ALT_BANANA_ID;
 
 	public static boolean ALT_HALLOWEENIVENT;
 
@@ -566,8 +564,7 @@ public final class Config {
 			ALT_GMSHOP_MIN_ID = Integer.parseInt(altSettings.getProperty("GMshopMinID", "0xffffffff")); // 設定錯誤時就取消GM商店
 			ALT_GMSHOP_MAX_ID = Integer.parseInt(altSettings.getProperty("GMshopMaxID", "0xffffffff")); // 設定錯誤時就取消GM商店
 			ALT_BANANA = Boolean.parseBoolean(altSettings.getProperty("Banana", "false"));
-			ALT_BANANA_MIN_ID = Integer.parseInt(altSettings.getProperty("BananaMinID", "0xffffffff")); // 設定錯誤時就取消BANANA商店
-			ALT_BANANA_MAX_ID = Integer.parseInt(altSettings.getProperty("BananaMaxID", "0xffffffff")); // 設定錯誤時就取消BANANA商店
+			ALT_BANANA_ID = Integer.parseInt(altSettings.getProperty("BananaID", "0xffffffff")); // 設定錯誤時就取消BANANA商店
 			ALT_HALLOWEENIVENT = Boolean.parseBoolean(altSettings.getProperty("HalloweenIvent", "true"));
 			ALT_JPPRIVILEGED = Boolean.parseBoolean(altSettings.getProperty("JpPrivileged", "false"));
 			ALT_TALKINGSCROLLQUEST = Boolean.parseBoolean(altSettings.getProperty("TalkingScrollQuest", "false"));
@@ -899,11 +896,8 @@ public final class Config {
 		else if (pName.equalsIgnoreCase("Banana")) {
 			ALT_BANANA = Boolean.valueOf(pValue);
 		}
-		else if (pName.equalsIgnoreCase("BananaMinID")) {
-			ALT_BANANA_MIN_ID = Integer.parseInt(pValue);
-		}
-		else if (pName.equalsIgnoreCase("BananaMaxID")) {
-			ALT_BANANA_MAX_ID = Integer.parseInt(pValue);
+		else if (pName.equalsIgnoreCase("BananaID")) {
+			ALT_BANANA_ID = Integer.parseInt(pValue);
 		}
 		else if (pName.equalsIgnoreCase("HalloweenIvent")) {
 			ALT_HALLOWEENIVENT = Boolean.valueOf(pValue);
