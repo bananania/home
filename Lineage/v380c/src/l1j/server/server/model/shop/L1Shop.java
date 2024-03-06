@@ -147,8 +147,8 @@ public class L1Shop {
 		if ( (Config.ALT_BANANA == true) && ((_npcId >= Config.ALT_BANANA_MIN_ID) && (_npcId <= Config.ALT_BANANA_MAX_ID)) ) {
 			if (!pc.getInventory().checkItem(L1ItemId.BANANA, price)) {
 			    System.out.println(price);
-			    // \f1アデナが不足しています。
-			    pc.sendPackets(new S_ServerMessage(189));
+			    // \f1アデナが不足しています。			    
+			    pc.sendPackets(new S_SystemMessage((new StringBuilder()).append("香蕉幣不足。").toString())); //pc.sendPackets(new S_ServerMessage(189));
 			    return false;
 		    }
 		}
