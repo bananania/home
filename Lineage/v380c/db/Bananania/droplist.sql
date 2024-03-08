@@ -6770,6 +6770,7 @@ INSERT INTO `droplist` VALUES ('45676', '40640', '1', '1', '10000', '0');
 INSERT INTO `droplist` VALUES ('45676', '40642', '1', '1', '10000', '0');
 INSERT INTO `droplist` VALUES ('45676', '40675', '1', '1', '10000', '0');
 INSERT INTO `droplist` VALUES ('45676', '40959', '1', '1', '300000', '0');
+INSERT INTO `droplist` VALUES ('45676', '41149', '1', '1', '1000', '0');
 INSERT INTO `droplist` VALUES ('45676', '50001', '3', '15', '1000000', '0');
 INSERT INTO `droplist` VALUES ('45677', '117', '1', '1', '100', '0');
 INSERT INTO `droplist` VALUES ('45677', '132', '1', '1', '10000', '0');
