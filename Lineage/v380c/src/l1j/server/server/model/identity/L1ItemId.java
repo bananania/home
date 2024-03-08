@@ -180,5 +180,5 @@ public class L1ItemId {
 	public static final int ADENA = 40308;
 	
 	/** 香蕉幣 */
-	public static final int BANANA = 50001;
+	public static final int BANANA = 49325;
 }
