@@ -159,9 +159,9 @@ public final class Config {
 
 	public static int CREATE_CHANCE_HISTORY_BOOK;
 
-	public static int MAGIC_STONE_TYPE; // 附魔石類型
+	public static int MAGIC_STONE_TYPE;
 
-	public static int MAGIC_STONE_LEVEL; // 附魔石階級
+	public static int MAGIC_STONE_LEVEL;
 
 	/** AltSettings control */
 	public static short GLOBAL_CHAT_LEVEL;
@@ -205,6 +205,8 @@ public final class Config {
 	public static boolean ALT_BANANA;
 
 	public static int ALT_BANANA_ID;
+	
+	public static boolean ALT_F24030901;
 
 	public static boolean ALT_HALLOWEENIVENT;
 
@@ -440,12 +442,8 @@ public final class Config {
 	
 	public static final String RECORD_SETTINGS_CONFIG_FILE = "./config/record.properties";
 
-	/** 其他設定 */
-
-	// 吸收每個 NPC 的 MP 上限
 	public static final int MANA_DRAIN_LIMIT_PER_NPC = 40;
 
-	// 每一次攻擊吸收的 MP 上限(馬那、鋼鐵馬那）
 	public static final int MANA_DRAIN_LIMIT_PER_SOM_ATTACK = 9;
 
 	public static void load() {
@@ -561,10 +559,11 @@ public final class Config {
 			ALT_ITEM_DELETION_TIME = Integer.parseInt(altSettings.getProperty("ItemDeletionTime", "10"));
 			ALT_ITEM_DELETION_RANGE = Integer.parseInt(altSettings.getProperty("ItemDeletionRange", "5"));
 			ALT_GMSHOP = Boolean.parseBoolean(altSettings.getProperty("GMshop", "false"));
-			ALT_GMSHOP_MIN_ID = Integer.parseInt(altSettings.getProperty("GMshopMinID", "0xffffffff")); // 設定錯誤時就取消GM商店
-			ALT_GMSHOP_MAX_ID = Integer.parseInt(altSettings.getProperty("GMshopMaxID", "0xffffffff")); // 設定錯誤時就取消GM商店
+			ALT_GMSHOP_MIN_ID = Integer.parseInt(altSettings.getProperty("GMshopMinID", "0xffffffff"));
+			ALT_GMSHOP_MAX_ID = Integer.parseInt(altSettings.getProperty("GMshopMaxID", "0xffffffff"));
 			ALT_BANANA = Boolean.parseBoolean(altSettings.getProperty("Banana", "false"));
-			ALT_BANANA_ID = Integer.parseInt(altSettings.getProperty("BananaID", "0xffffffff")); // 設定錯誤時就取消BANANA商店
+			ALT_BANANA_ID = Integer.parseInt(altSettings.getProperty("BananaID", "0xffffffff"));
+			ALT_F24030901 = Boolean.parseBoolean(altSettings.getProperty("F24030901", "false"));
 			ALT_HALLOWEENIVENT = Boolean.parseBoolean(altSettings.getProperty("HalloweenIvent", "true"));
 			ALT_JPPRIVILEGED = Boolean.parseBoolean(altSettings.getProperty("JpPrivileged", "false"));
 			ALT_TALKINGSCROLLQUEST = Boolean.parseBoolean(altSettings.getProperty("TalkingScrollQuest", "false"));
@@ -898,6 +897,9 @@ public final class Config {
 		}
 		else if (pName.equalsIgnoreCase("BananaID")) {
 			ALT_BANANA_ID = Integer.parseInt(pValue);
+		}
+		else if (pName.equalsIgnoreCase("F24030901")) {
+			ALT_F24030901 = Boolean.valueOf(pValue);
 		}
 		else if (pName.equalsIgnoreCase("HalloweenIvent")) {
 			ALT_HALLOWEENIVENT = Boolean.valueOf(pValue);

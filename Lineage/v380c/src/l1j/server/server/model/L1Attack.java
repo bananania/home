@@ -911,8 +911,8 @@ public class L1Attack {
 				|| _weaponId == 294 || _weaponId == 295 || _weaponId == 296
 				|| _weaponId == 297 || _weaponId == 298 || _weaponId == 299
 				|| _weaponId == 300 || _weaponId == 301 || _weaponId == 302
-				|| _weaponId == 303) { // バフォメットスタッフ
-			dmg += L1WeaponSkill.getBaphometStaffDamage(_pc, _target);
+				|| _weaponId == 303 ) { // バフォメットスタッフ
+			dmg += L1WeaponSkill.getBaphometStaffDamage(_pc, _target, _weaponId); //ALT_F24030901 add _weaponId
 		} else if (_weaponId == 2 || _weaponId == 200002) { // ダイスダガー
 			dmg += L1WeaponSkill.getDiceDaggerDamage(_pc, _targetPc, weapon);
 		} else if (_weaponId == 204 || _weaponId == 100204) { // 真紅のクロスボウ
@@ -1041,8 +1041,8 @@ public class L1Attack {
 				|| _weaponId == 294 || _weaponId == 295 || _weaponId == 296
 				|| _weaponId == 297 || _weaponId == 298 || _weaponId == 299
 				|| _weaponId == 300 || _weaponId == 301 || _weaponId == 302
-				|| _weaponId == 303) {
-			dmg += L1WeaponSkill.getBaphometStaffDamage(_pc, _target);
+				|| _weaponId == 303 ) {
+			dmg += L1WeaponSkill.getBaphometStaffDamage(_pc, _target, _weaponId); //ALT_F24030901 add _weaponId
 		} else if ((_weaponId == 2) || (_weaponId == 200002)) { // ダイスダガー
 			dmg += L1WeaponSkill.getDiceDaggerDamage(_pc, _targetNpc, weapon);
 		} else if ((_weaponId == 204) || (_weaponId == 100204)) { // 真紅のクロスボウ
@@ -1419,7 +1419,7 @@ public class L1Attack {
 
 	// ■■■■ マナスタッフ、鋼鉄のマナスタッフ、マナバーラードのMP吸収量算出 ■■■■
 	public void calcStaffOfMana() {
-		if ((_weaponId == 126) || (_weaponId == 127)) { // SOMまたは鋼鉄のSOM
+		if ((_weaponId == 126) || (_weaponId == 127) || (_weaponId == 293) || (_weaponId == 298) || (_weaponId == 303)) { // SOMまたは鋼鉄のSOM //ALT_F24030901 add 293, 298, 303
 			int som_lvl = _weaponEnchant + 3; // 最大MP吸収量を設定
 			if (som_lvl < 0) {
 				som_lvl = 0;

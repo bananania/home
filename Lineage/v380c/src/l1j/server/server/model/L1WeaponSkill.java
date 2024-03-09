@@ -14,6 +14,7 @@
  */
 package l1j.server.server.model;
 
+import l1j.server.Config; //ALT_F24030901
 import static l1j.server.server.model.skill.L1SkillId.ABSOLUTE_BARRIER;
 import static l1j.server.server.model.skill.L1SkillId.BERSERKERS;
 import static l1j.server.server.model.skill.L1SkillId.COUNTER_MAGIC;
@@ -261,7 +262,7 @@ public class L1WeaponSkill {
 		return calcDamageReduction(pc, cha, damage, weaponSkill.getAttr());
 	}
 
-	public static double getBaphometStaffDamage(L1PcInstance pc, L1Character cha) {
+	public static double getBaphometStaffDamage(L1PcInstance pc, L1Character cha, int weaponId) { //ALT_F24030901 add weaponId
 		double dmg = 0;
 		int chance = Random.nextInt(100) + 1;
 		if (14 >= chance) {
@@ -274,11 +275,43 @@ public class L1WeaponSkill {
 				bsk = 0.2;
 			}
 			dmg = (intel + sp) * (1.8 + bsk) + Random.nextInt(intel + sp) * 1.8;
-			S_EffectLocation packet = new S_EffectLocation(locx, locy, 129);
-			pc.sendPackets(packet);
-			pc.broadcastPacket(packet);
+			if (Config.ALT_F24030901 == false) {
+			    S_EffectLocation packet = new S_EffectLocation(locx, locy, 129);
+			    pc.sendPackets(packet);
+			    pc.broadcastPacket(packet);
+			}
+			else {			    
+			    if (weaponId == 294 || weaponId == 295 || weaponId == 296
+			    	|| weaponId == 297 || weaponId == 298) {
+			    	S_EffectLocation packet = new S_EffectLocation(locx, locy, 762);   
+			    	pc.sendPackets(packet);
+			        pc.broadcastPacket(packet); 
+			    }
+			    else if (weaponId == 299 || weaponId == 300 || weaponId == 301 
+			        || weaponId == 302 || weaponId == 303) {
+			    	S_EffectLocation packet = new S_EffectLocation(locx, locy, 1815);
+			    	pc.sendPackets(packet);
+			        pc.broadcastPacket(packet); 
+			    }
+			    else {
+			        S_EffectLocation packet = new S_EffectLocation(locx, locy, 129);
+			        pc.sendPackets(packet);
+			        pc.broadcastPacket(packet); 
+			    }			
+		    }			
 		}
-		return calcDamageReduction(pc, cha, dmg, L1Skills.ATTR_EARTH);
+		if (Config.ALT_F24030901 == false) {
+		    return calcDamageReduction(pc, cha, dmg, L1Skills.ATTR_EARTH);
+		}
+		else {
+		    if (weaponId == 299 || weaponId == 300 || weaponId == 301 
+			    || weaponId == 302 || weaponId == 303) {
+			    return calcDamageReduction(pc, cha, dmg, L1Skills.ATTR_RAY); 
+	        }
+	        else {
+	            return calcDamageReduction(pc, cha, dmg, L1Skills.ATTR_EARTH);
+	        }
+	    }
 	}
 
 	/** 骰子匕首 */
