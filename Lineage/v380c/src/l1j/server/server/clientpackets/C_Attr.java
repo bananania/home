@@ -631,7 +631,7 @@ public class C_Attr extends ClientBasePacket {
 			}
 			// 刪除舊盟徽
 			String emblem_file = String.valueOf(oldClan.getEmblemId());
-			File file = new File("emblem/" + emblem_file);
+			File file = new File(emblem_file); //("emblem/" + emblem_file); //F24031001
 			file.delete();
 			ClanTable.getInstance().deleteClan(oldClanName);
 		}

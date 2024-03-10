@@ -31,7 +31,7 @@ public class S_Emblem extends ServerBasePacket {
 		BufferedInputStream bis = null;
 		try {
 			String emblem_file = String.valueOf(emblemId);
-			File file = new File("emblem/" + emblem_file);
+			File file = new File(emblem_file); //("emblem/" + emblem_file); //F24031001
 			if (file.exists()) {
 				int data = 0;
 				bis = new BufferedInputStream(new FileInputStream(file));

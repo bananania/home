@@ -52,7 +52,7 @@ public class C_EmblemUpload extends ClientBasePacket {
 			
 			FileOutputStream fos = null;
 			try {
-				fos = new FileOutputStream("emblem/" + emblem_file);
+				fos = new FileOutputStream(emblem_file); //("emblem/" + emblem_file); //F24031001
 				for (short cnt = 0; cnt < 384; cnt++) {
 					fos.write(readC());
 				}
