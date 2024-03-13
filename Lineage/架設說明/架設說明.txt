@@ -4,28 +4,29 @@
     (1.1) 下載安裝 JAVA jdk1.7.0_79 (檔名: jdk-7u79-windows-x64.exe)
           (下載路徑: "https://www.oracle.com/tw/java/technologies/javase/javase7-archive-downloads.html")
     (1.2) 下載Server端源碼&編譯器, 編譯器在Server端源碼內
-          (下載路徑: "https://github.com/NewSvn/l1j-tw-99nets/L1J-TW_3.50c")
-          Server端源碼可放在 D:\L1J-TW_3.50c
+          (下載路徑: "https://github.com/NewSvn/l1j-tw-99nets/L1J-TW_3.80c")
+          Server端源碼可放在 D:\v380c
     (1.3) 解壓縮地圖 
-          視Lineage使用的版本, 如Lineage V3.6C, 選擇360_maps.zip, 如Lineage V3.52C, 選擇352_maps.zip
-          解壓縮D:\L1J-TW_3.50c\maps\360_maps.zip
-          (確定地圖是在maps資料夾,必須是D:\L1J-TW_3.50c\maps\0.txt, 而不是D:\L1J-TW_3.50c\maps\maps\0.txt)
+          Lineage使用的版本 V3.81C, 選擇360_maps.zip
+          解壓縮D:\v380c\maps\360_maps.zip
+          (確定地圖是在maps資料夾,必須是D:\v380c\maps\0.txt, 而不是D:\v380c\maps\maps\0.txt)
     (1.4) 設定環境變數
           系統>>進階系統設定>>環境變數>>使用者變數>>
-          新增>>變數名稱 ANT_HOME 變數值 D:\L1J-TW_3.50c\build\ant
+          新增>>變數名稱 ANT_HOME 變數值 D:\v380c\build\ant
           新增>>變數名稱 JAVA_HOME 變數值 C:\Program Files\Java\jdk1.7.0_79
+          新增>>變數名稱 classpath 變數值 .
           編輯Path>>新增>> %ANT_HOME%\bin
           編輯Path>>新增>> %JAVA_HOME%\bin
     (1.5) 切換到Server端源碼的資料夾路徑
-          Windows>>執行>>輸入cmd>>開啟DOS介面>>輸入D:>>輸入cd L1J-TW_3.50c
-    (1.6) 編譯 L1J-TW_3.50c
-          輸入ant>>此時會開始編譯L1J-TW_3.50c, 編譯完成後, 會在D:\L1J-TW_3.50c找到開啟Server所需要的l1jserver.jar
+          Windows>>執行>>輸入cmd>>開啟DOS介面>>輸入D:>>輸入cd v380c
+    (1.6) 編譯 L1J-TW_3.80c
+          輸入ant>>此時會開始編譯L1J-TW_3.80c, 編譯完成後, 會在D:\v380c找到開啟Server所需要的l1jserver.jar
           編譯完成後, 關閉DOS視窗, 回到Windows
     (1.7) 檢查Server設定
-          在D:\L1J-TW_3.50c\config資料夾, 檢查server.properties, rates.properties設定
+          在D:\v380c\config資料夾, 檢查server.properties, rates.properties設定
           (如果有更改設定, 需回到步驟1.5, 重新編譯出新的l1jserver.jar)
     (1.8) 開啟 Server
-          在D:\L1J-TW_3.50c資料夾, 滑鼠雙擊ServerStart.bat, 正常跑完表示, Server已開啟, 等待使用者進入
+          在D:\v380c資料夾, 滑鼠雙擊ServerStart.bat, 正常跑完表示, Server已開啟, 等待使用者進入
 
 (2) 開啟資料庫
     (Navicat8 + mysql 5.5.22, 下載路徑: "https://mega.nz/folder/984yQRpS#p5zNAi8mC8_NxwKJYCw5Xg")
@@ -41,18 +42,40 @@
           左邊出現新資料庫l1jdb>>右鍵點l1jdb>>執行批次任務檔案>>載入步驟2.1產生的l1jdb_Taiwan.sql>>l1jdb載入 
           l1jdb點擊右鍵選>>開啟資料庫
 
-(3) 下載Lineage V3.6C
-    (下載路徑: "https://drive.google.com/file/d/1ENAEupyWzzUVT53cDl4R4rfoz_RrvbUP/view")
-    下載後, 解壓縮到C:\Program Files
+(3) 下載Lineage V3.81C
+    (xx下載路徑: "https://drive.google.com/file/d/1ENAEupyWzzUVT53cDl4R4rfoz_RrvbUP/view")
+    下載後, 解壓縮到D:\
 
 (4) 更新Login檔
 
 
-(5) 執行Lineage V3.6C
-    執行C:\Program Files\Lineage V3.6C\Login.exe
+(5) 執行Lineage V3.81C
+    執行D:\Lineage V3.81C\Login.exe (需改為相容 Win7)
 
 (6) 外部連線設定
-
+    (6.1) 製作登入器 (IP: 對外連線IP, Port: 2000)
+    (6.2) 登入Tp-Link設備設定頁面192.168.0.1，並點擊進階設定頁籤。
+          點擊NAT 導向->虛擬伺服器。點擊增加。
+          服務類型 : LineageServer <設定名稱>
+          外部通訊埠 : 2000 <外部埠~>
+          內部 IP : 192.168.1.4 <內部IP>
+          內部通訊埠 : 2000 <內部埠~>
+          通訊協定 : 全部 <TCP/UDP>
+          此時透過外部IP:2000連接，被導入到內部IP:2000。
+    (6.3) 模擬器防火牆設置
+          進入到控制台\系統及安全性\Windows 防火牆。
+          點擊進階設定，進入進階安全性的 Windows 防火牆。
+          點擊輸入規則->新增規則。
+          選擇連接埠，並點擊下一步。
+          選擇TCP，特定本機連接埠輸入2000，並點擊下一步。
+          選擇允許連線，並點擊下一步。
+          預設全部勾選(網域 私人 共用)，並點擊下一步。
+          輸入這個規則的名稱，Lineage Server，並點擊完成。
+    (6.4) 這個時候，應該已經是可以透過登入器來登入到這個模擬器內進行遊玩。
+          如果還是無法遊玩，可以透過簡單排查方式來看是否是防火牆問題。
+          <直接將防火牆關閉，如果還是無法登入，那一定不是防火牆問題。>
+          如果不是防火牆問題，為何還是無法連線？
+          需要通過虛擬服務器或通訊埠轉發技術來實現。
 
 (7) WEB3應用
     (7.1) 帳號ID與錢包註冊
