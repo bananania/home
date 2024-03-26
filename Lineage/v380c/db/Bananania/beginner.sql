@@ -43,3 +43,12 @@ INSERT INTO `beginner` VALUES ('8', '233', '1', '0', '0', '香蕉巨劍', 'R', '
 INSERT INTO `beginner` VALUES ('9', '238', '1', '0', '0', '香蕉魔杖', 'I', '1');
 INSERT INTO `beginner` VALUES ('10', '40010', '500', '0', '0', '治癒藥水', 'A', '1');
 INSERT INTO `beginner` VALUES ('11', '40013', '50', '0', '0', '自我加速藥水', 'A', '1');
+INSERT INTO `beginner` VALUES ('12', '47000', '5', '0', '0', '150%神力藥水', 'A', '1');
+INSERT INTO `beginner` VALUES ('13', '49325', '5', '0', '0', '香蕉幣', 'A', '1');
+INSERT INTO `beginner` VALUES ('14', '286', '1', '0', '0', '艾爾摩短劍', 'P', '0');
+INSERT INTO `beginner` VALUES ('15', '284', '1', '0', '0', '艾爾摩雙手劍', 'K', '0');
+INSERT INTO `beginner` VALUES ('16', '283', '1', '0', '0', '艾爾摩弩槍', 'E', '0');
+INSERT INTO `beginner` VALUES ('17', '281', '1', '0', '0', '艾爾摩魔杖', 'W', '0');
+INSERT INTO `beginner` VALUES ('18', '282', '1', '0', '0', '艾爾摩鋼爪', 'D', '0');
+INSERT INTO `beginner` VALUES ('19', '280', '1', '0', '0', '艾爾摩鎖鏈劍', 'R', '0');
+INSERT INTO `beginner` VALUES ('20', '279', '1', '0', '0', '艾爾摩奇古獸', 'I', '0');
