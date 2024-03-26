@@ -207,6 +207,8 @@ public final class Config {
 	public static int ALT_BANANA_ID;
 	
 	public static boolean ALT_F24030901;
+	
+	public static boolean ALT_F24032601;
 
 	public static boolean ALT_HALLOWEENIVENT;
 
@@ -564,6 +566,7 @@ public final class Config {
 			ALT_BANANA = Boolean.parseBoolean(altSettings.getProperty("Banana", "false"));
 			ALT_BANANA_ID = Integer.parseInt(altSettings.getProperty("BananaID", "0xffffffff"));
 			ALT_F24030901 = Boolean.parseBoolean(altSettings.getProperty("F24030901", "false"));
+			ALT_F24032601 = Boolean.parseBoolean(altSettings.getProperty("F24032601", "false"));
 			ALT_HALLOWEENIVENT = Boolean.parseBoolean(altSettings.getProperty("HalloweenIvent", "true"));
 			ALT_JPPRIVILEGED = Boolean.parseBoolean(altSettings.getProperty("JpPrivileged", "false"));
 			ALT_TALKINGSCROLLQUEST = Boolean.parseBoolean(altSettings.getProperty("TalkingScrollQuest", "false"));
@@ -900,6 +903,9 @@ public final class Config {
 		}
 		else if (pName.equalsIgnoreCase("F24030901")) {
 			ALT_F24030901 = Boolean.valueOf(pValue);
+		}
+		else if (pName.equalsIgnoreCase("F24032601")) {
+			ALT_F24032601 = Boolean.valueOf(pValue);
 		}
 		else if (pName.equalsIgnoreCase("HalloweenIvent")) {
 			ALT_HALLOWEENIVENT = Boolean.valueOf(pValue);

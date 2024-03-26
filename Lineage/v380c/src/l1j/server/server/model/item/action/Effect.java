@@ -14,6 +14,13 @@
  */
 package l1j.server.server.model.item.action;
 
+import l1j.server.Config; //ALT_F24032601
+import l1j.server.server.model.skill.L1BuffUtil; //ALT_F24032601
+import l1j.server.server.model.L1PolyMorph; //ALT_F24032601
+import l1j.server.server.templates.L1Skills; //ALT_F24032601
+import l1j.server.server.model.skill.L1SkillUse; //ALT_F24032601
+import l1j.server.server.datatables.SkillsTable; //ALT_F24032601
+
 import static l1j.server.server.model.skill.L1SkillId.*;
 
 import l1j.server.server.model.Instance.L1ItemInstance;
@@ -135,7 +142,23 @@ public class Effect {
 		} else {
 			useEffect(pc, skillId, time);
 			if (deteleItem) { // 刪除道具
-				pc.getInventory().removeItem(item, 1);
+				if (Config.ALT_F24032601 == true) {
+					if ((itemId >= L1ItemId.POTION_OF_EXP_150) && (itemId <= L1ItemId.POTION_OF_EXP_250)) {
+					    int[] allBuffSkill = { 
+					    	LIGHT, DECREASE_WEIGHT, PHYSICAL_ENCHANT_DEX, MEDITATION, PHYSICAL_ENCHANT_STR, BLESS_WEAPON, BERSERKERS, IMMUNE_TO_HARM, ADVANCE_SPIRIT,
+				            REDUCTION_ARMOR, BOUNCE_ATTACK, SOLID_CARRIAGE, ENCHANT_VENOM, BURNING_SPIRIT, VENOM_RESIST, DOUBLE_BRAKE, UNCANNY_DODGE,
+				            DRESS_EVASION, GLOWING_AURA, BRAVE_AURA, RESIST_MAGIC, CLEAR_MIND, ELEMENTAL_PROTECTION, AQUA_PROTECTER, BURNING_WEAPON, IRON_SKIN,
+				            EXOTIC_VITALIZE, WATER_LIFE, ELEMENTAL_FIRE, SOUL_OF_FLAME, ADDITIONAL_FIRE };
+						L1BuffUtil.haste(pc, 3600 * 1000);
+			            L1BuffUtil.brave(pc, 3600 * 1000);
+			            L1PolyMorph.doPoly(pc, 5641, 7200, L1PolyMorph.MORPH_BY_GM);	
+			            for (int element : allBuffSkill) {
+				            L1Skills skill = SkillsTable.getInstance().getTemplate(element);
+				            new L1SkillUse().handleCommands(pc, element, pc.getId(), pc.getX(), pc.getY(), null, skill.getBuffDuration() * 1000, L1SkillUse.TYPE_GMBUFF);
+			            }
+					}
+				}
+				pc.getInventory().removeItem(item, 1);				
 			}
 		}
 	}
