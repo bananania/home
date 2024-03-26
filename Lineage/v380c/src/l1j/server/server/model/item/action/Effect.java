@@ -151,15 +151,15 @@ public class Effect {
 				            EXOTIC_VITALIZE, WATER_LIFE, ELEMENTAL_FIRE, SOUL_OF_FLAME, ADDITIONAL_FIRE };
 						L1BuffUtil.haste(pc, 3600 * 1000);
 			            L1BuffUtil.brave(pc, 3600 * 1000);
-			            if ((itemId >= L1ItemId.POTION_OF_EXP_150) && (itemId <= L1ItemId.POTION_OF_EXP_175)) {
-			                L1PolyMorph.doPoly(pc, 11631, 7200, L1PolyMorph.MORPH_BY_GM);
-			            }
-			            else if ((itemId >= L1ItemId.POTION_OF_EXP_200) && (itemId <= L1ItemId.POTION_OF_EXP_225)) {
-			                L1PolyMorph.doPoly(pc, 11653, 7200, L1PolyMorph.MORPH_BY_GM);
-			            }
-			            else {
+			            //if ((itemId >= L1ItemId.POTION_OF_EXP_150) && (itemId <= L1ItemId.POTION_OF_EXP_175)) {
+			            //    L1PolyMorph.doPoly(pc, 11631, 7200, L1PolyMorph.MORPH_BY_GM);
+			            //}
+			            //else if ((itemId >= L1ItemId.POTION_OF_EXP_200) && (itemId <= L1ItemId.POTION_OF_EXP_225)) {
+			            //    L1PolyMorph.doPoly(pc, 11653, 7200, L1PolyMorph.MORPH_BY_GM);
+			            //}
+			            //else {
 			                L1PolyMorph.doPoly(pc, 5641, 7200, L1PolyMorph.MORPH_BY_GM);
-			            }	
+			            //}	
 			            for (int element : allBuffSkill) {
 				            L1Skills skill = SkillsTable.getInstance().getTemplate(element);
 				            new L1SkillUse().handleCommands(pc, element, pc.getId(), pc.getX(), pc.getY(), null, skill.getBuffDuration() * 1000, L1SkillUse.TYPE_GMBUFF);
