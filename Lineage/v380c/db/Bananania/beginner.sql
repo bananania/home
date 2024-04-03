@@ -52,3 +52,4 @@ INSERT INTO `beginner` VALUES ('17', '281', '1', '0', '0', '艾爾摩魔杖', 'W
 INSERT INTO `beginner` VALUES ('18', '282', '1', '0', '0', '艾爾摩鋼爪', 'D', '0');
 INSERT INTO `beginner` VALUES ('19', '280', '1', '0', '0', '艾爾摩鎖鏈劍', 'R', '0');
 INSERT INTO `beginner` VALUES ('20', '279', '1', '0', '0', '艾爾摩奇古獸', 'I', '0');
+INSERT INTO `beginner` VALUES ('21', '232', '1', '0', '0', '香蕉之劍', 'E', '1');
