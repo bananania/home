@@ -1,0 +1,26 @@
+Bitcoin
+Litecoin
+Ethereum
+  - Uni(DEX)
+  - Link (預言機)
+  - Optimism (L2)
+  - Base (L2)
+  - Arbitrum (L2)
+  - Polygon (L2)
+  - GRT (Graph AI)
+  - APE (GameFi)
+  - zkSync (L3)
+BSC
+  - Pancakeswap (DEX)
+  - FIL (File AI)
+Solana
+Ton
+Cardano
+Polkadot
+Avalanche
+Meme
+  - Doge
+  - Pepe
+  - FLOKI
+  - SHIB
+  - Worldcoin WLD
