@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="images_225.png">
+  <title>Bananania Home</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .phase {
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+      color: #fff;
+    }
+
+    #phase1 {
+      background: linear-gradient(to bottom, #ffff99, #ffcc66);
+    }
+
+    #phase2 {
+      background: linear-gradient(to bottom, #b3e0ff, #66a3ff);
+    }
+
+    #phase3 {
+      background: linear-gradient(to bottom, #ffb3b3, #ff6666);
+    }
+    
+    #phase4 {
+      background: linear-gradient(to bottom, #e6e6fa, #c6a4ff);
+    }
+
+    .links-container {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+
+    h2,
+    h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .link {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #555;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .link:hover {
+      background-color: #777;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="phase1" class="phase">
+    <div class="links-container">
+      <h2>Bananania NFT</h2><br>
+      <a href="./Bananania.html" class="link">Mint it</a><br><br>
+      <p><strong>Q:</strong> Where can I buy Bananania NFT?</p>
+      <p><strong>A:</strong> Mint it via Ethereum, You will have your legendary weapon.</p>
+    </div>
+  </div>
+
+  <div id="phase2" class="phase">
+    <div class="links-container">
+      <h2>BANANA Coin</h2><br>
+      <a href="./BanananiaCoin.html" class="link">BANANA Coin</a><br><br>
+      <p><strong>Q:</strong> Where to buy BANANA Coin?</p>
+      <p><strong>A:</strong> Swap on <a href="https://app.uniswap.org/tokens/ethereum/0xC40417C65306dC5fF11A62578EF56f3006124Ab3" target="_blank">Uniswap V3</a></p>
+    </div>
+  </div>
+
+  <div id="phase3" class="phase">
+    <div class="links-container">
+      <h2>P2E & GameFi</h2><br>
+      <a href="./GameFi_Bananania.html" class="link">GameFi Bananania</a><br><br>
+      <p><strong>Q:</strong> What is P2E & GameFi?</p>
+      <p><strong>A:</strong> Play to earn BANANA Coin, and use BANANA Coin to buy stronger armors, potions, and items.</p>
+    </div>
+  </div>
+  
+  <div id="phase4" class="phase">
+    <div class="links-container">
+      <h2>Bananania White Paper</h2><br>
+      <a href="./whitepaper.html" class="link">White Paper</a><br>
+    </div>
+    <div id="counter">Loading...</div>
+  </div>
+  
+  <script>
+    // JavaScript code to handle the counter
+    let visitCount = localStorage.getItem('visitCount') || 0;
+    function updateCounter() {
+        visitCount++;
+        document.getElementById('counter').textContent = visitCount;
+        localStorage.setItem('visitCount', visitCount);
+    }
+    // Display the counter on page load
+    window.onload = function () {
+        updateCounter();
+    };
+  </script>
+
+</body>
+
+</html>
